@@ -1,3 +1,18 @@
 body {
+  @extend %opensans-regular;
+  font-size: 14px;
+  line-height: 140%;
+  background-color: $white;
+}
 
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.link {
+  font-size: 13px;
+  @extend %opensans-bold;
+  color: $white;
 }

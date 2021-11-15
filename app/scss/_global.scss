@@ -24,6 +24,15 @@ body {
   padding: 0 15px;
 }
 
+.btn {
+  padding: 12px 24px;
+  font-size: 18px;
+  line-height: 1.3;
+  background-color: $green-900;
+  color: $white;
+  border-radius: 6px;
+}
+
 .link {
   font-size: 13px;
   @extend %opensans-bold;

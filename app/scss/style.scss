@@ -76,7 +76,7 @@
   background-color: $white;
   color: $green-900;
   border-radius: 6px;
-
+  transition: background-color 0.3s;
   &::before,
   &::after {
     content: "";
@@ -97,6 +97,9 @@
     width: 7px;
     height: 4px;
     background-image: url('../images/arrow-down.svg');
+  }
+  &:hover {
+    background-color: #E0EDCF;
   }
 }
 
@@ -135,6 +138,19 @@
     background-color: $dark-800;
     color: $white;
     border-radius: 0 6px 6px 0;
+    transition: background-color 0.3s,
+    color 0.3s,
+    box-shadow 0.3s ease;
+    &:hover {
+      background-color: rgba(49, 53, 43, 0.85);
+    }
+    &:focus {
+      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+      border-radius: 0 6px 6px 0;
+    }
+    &:active {
+      color: rgba(255, 255, 255, 0.5);
+    }
   }
 }
 
@@ -229,6 +245,8 @@
     position: absolute;
     top: 50%;
     z-index: 10;
+    width: 60px;
+    height: 60px;
     padding: 0;
     border: none;
     cursor: pointer;
@@ -242,26 +260,101 @@
   .slick-next {
     right: 194px;
   }
+
+  .slick-arrow.slick-disabled {
+    cursor: default;
+  }
+
+  .slick-arrow.slick-disabled path {
+    fill: $silver-600;
+  }
+
+  .slick-arrow:focus {
+    box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
+    border-radius: 6px;
+  }
+
+  .slick-arrow:hover path,
+  .slick-arrow:active path {
+    fill: $green-900;
+  }
+
+  .slick-arrow:hover rect {
+    fill: $green-200;
+  }
+
+  .slick-arrow.slick-disabled:hover path {
+    fill: $silver-600;
+  }
+
+  .slick-arrow:active rect {
+    fill: #F3F3F2;
+  }
+
+
 }
 
+.top-product {
+  padding: 72px 0;
+  text-align: center;
 
+  &__fillter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 48px;
+  }
 
+  &__fillter-btn {
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    transition: color 0.3s;
 
+    &:hover {
+      color: $green-900;
+    }
 
+    &:active {
+      border-bottom: 1px solid rgba(99, 166, 14, 0.2);
+    }
 
+    &:focus {
+      box-shadow: 0 0 0 3px #E0EDCF;
+      border-radius: 3px;
+      color: $dark-500;
+    }
 
+  }
 
+  &__fillter-item:not(:last-child) {
+    margin-right: 24px;
+  }
 
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-gap: 30px;
+    margin-bottom: 48px;
+  }
 
-
-
-
-
-
-
-
-
-
+  .btn {
+    color: $green-900;
+    background-color: $white;
+    border: 1px solid $green-900;
+    &:hover {
+      background-color: #EFF6E7;
+    }
+    &:focus {
+      box-shadow: 0 0 0 4px rgba(99, 166, 14, 0.5);
+      border-radius: 6px;
+    }
+    &:active {
+      box-shadow: inset 0 10px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+    }
+  }
+}
 
 .conditions {
   padding: 48px 0 29px;
@@ -315,7 +408,6 @@
   }
 }
 
-
 .footer {
   padding-top: 30px;
   background-color: $dark-800;
@@ -361,7 +453,7 @@
   }
 
   &__form-btn {
-    padding: 13px 16px 12px;
+    padding: 14px 16px 11px;
     font-weight: 700;
     font-size: 12px;
     line-height: 1.3;
@@ -370,6 +462,19 @@
     color: $white;
     border-radius: 0 6px 6px 0;
     border: none;
+    transition: background-color 0.3s,
+    box-shadow 0.3s, color 0.3s;
+    &:hover {
+      background-color: #4D800C;
+    }
+    &:focus {
+      box-shadow: 0 0 0 4px #E0EDCF;
+      border-radius: 0 6px 6px 0;
+    }
+    &:active {
+      color: rgba(255, 255, 255, 0.5);
+      box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
   }
 
   &__menu {

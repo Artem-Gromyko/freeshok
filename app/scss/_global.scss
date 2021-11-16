@@ -1,3 +1,257 @@
 body {
+  height: 100%;
+  @extend %opensans-regular;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  background-color: $white;
+  color: $dark-500;
+}
 
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 18px;
+  line-height: 1.3;
+  background-color: $green-900;
+  color: $white;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transition: background-color 0.3s,
+    box-shadow 0.3s,
+    color 0.3s;
+
+  &:hover {
+    background-color: #4D810C;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 4px #E0EDCF;
+    border-radius: 6px;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+  }
+}
+
+.title {
+  margin-bottom: 30px;
+  @extend %ruda-semibold;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $dark-900;
+}
+
+.product-card {
+  position: relative;
+  width: 300px;
+  height: 410px;
+  padding: 56px 0 18px;
+  text-align: left;
+  background-color: $white;
+  border: 1px solid rgba(17, 17, 17, 0.2);
+  border-radius: 6px;
+
+  &__badges {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+  }
+
+  &__badges-new {
+    margin-bottom: 6px;
+  }
+
+  &__badges-discount {
+    background-color: $red-900;
+  }
+
+  &__favorite {
+    position: absolute;
+    top: 17px;
+    right: 12px;
+    width: 32px;
+    height: 29px;
+    background-color: tansparent;
+  }
+
+  &__badges-hit {
+    background-color: $orange-900;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    transition: opacity 0.3s,
+    background-color 0.3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: transparent;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 48px;
+      height: 48px;
+      background-image: url('../images/icon/search-green.svg');
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+      background-position: center;
+      background-color: $white;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+
+    &:hover::before {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+
+  &__img {
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    margin: 0 18px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align-last: left;
+    letter-spacing: 0.03em;
+    color: $dark-900;
+  }
+
+  &__price {
+    position: absolute;
+    left: 21px;
+    bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    line-height: 1;
+    letter-spacing: 0.03em;
+  }
+
+  &__old-price {
+    position: relative;
+    margin-bottom: 3px;
+    color: $silver-600;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      width: 45px;
+      height: 1px;
+      background-color: $silver-600;
+      transform: rotate(15deg);
+    }
+  }
+
+  &__new-price {
+    color: $dark-500;
+  }
+
+  &__basket {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    background-color: $green-900;
+    border-radius: 3px;
+    transition: background-color 0.3s,
+      box-shadow 0.3s, fill 0.3s;
+
+    &:hover {
+      background-color: #4D800C;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 4px #E0EDCF;
+      border-radius: 3px;
+    }
+
+    &:active path {
+      fill: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+.link {
+  font-size: 13px;
+  @extend %opensans-bold;
+  font-weight: 700;
+  color: $white;
+  transition: opacity 0.4s,
+    box-shadow 0.4s, color 0.4s ease;
+}
+
+.link:hover {
+  opacity: 0.7;
+}
+
+.link:focus {
+  box-shadow: 0 0 0 3px #EFF6E7;
+  border-radius: 3px;
+  opacity: 1;
+}
+
+.link:active {
+  color: $green-200;
+}
+
+.social {
+  display: flex;
+
+  &__item {
+    margin-right: 12px;
+  }
+
+  &__link {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    background-position: 0 0;
+  }
 }

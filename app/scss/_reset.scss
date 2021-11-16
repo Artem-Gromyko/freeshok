@@ -1,4 +1,5 @@
 html {
+  height: 100%;
   box-sizing: border-box;
 }
 
@@ -54,6 +55,10 @@ select {
 
 address {
   font-style: normal;
+}
+
+a {
+  text-decoration: none;
 }
 
 button {

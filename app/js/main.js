@@ -23,4 +23,9 @@ $(function () {
   var mixer2 = mixitup(containerEl2, config);
 
 
+  $('.catalog').on('click', function () {
+    $('.catalog, .catalog__list').toggleClass('active');
+  });
+
+  
 });

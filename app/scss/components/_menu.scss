@@ -1,0 +1,45 @@
+.menu {
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  &__link {
+    padding: 13px 0;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.38;
+    letter-spacing: 0.03em;
+    color: $white;
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    background-size: 34px 22px;
+    background-position: left center;
+    transition: opacity 0.3s, box-shadow 0.3s;
+
+    &--address {
+      padding-right: 22px;
+      padding-left: 44px;
+      background-image: url('../images/icon/delivery.svg');
+    }
+
+    &--tel {
+      padding-right: 22px;
+      padding-left: 37px;
+      background-size: 34px 22px;
+      background-image: url('../images/icon/tel.svg');
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px #EFF6E7;
+      border-radius: 3px;
+    }
+  }
+}

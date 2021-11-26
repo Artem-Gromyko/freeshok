@@ -1,0 +1,124 @@
+.promoution {
+  background-color: #F5F5F5;
+
+  &__filter-item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 48px;
+  }
+
+  &__card {
+    display: flex;
+    padding: 12px 12px 0;
+  }
+
+  &__badges {
+    top: 13px;
+    z-index: 1;
+  }
+
+  &__link {
+    width: 100px;
+    height: 100px;
+    margin-right: 12px;
+
+    &:hover {
+      &::before {
+        background-color: transparent;
+      }
+    }
+
+    &:hover {
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  &__subtitle {
+    width: 164px;
+    height: 56px;
+    margin-bottom: 10px;
+  }
+
+  &__condition {
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    &--in {
+      color: $green-900;
+    }
+
+    &--ends {
+      color: $red-900;
+    }
+
+    &--out {
+      color: $silver-600;
+    }
+  }
+
+  &__box {
+    flex-direction: row-reverse;
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1;
+
+    .currency {
+      font-size: 13px;
+    }
+
+    &--old {
+      align-self: end;
+      margin-bottom: 0;
+      margin-left: 12px;
+      font-size: 12px;
+
+      &::before {
+        top: 5px;
+        width: 39px;
+      }
+    }
+  }
+
+  &__num {
+    position: relative;
+    padding-right: 18px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 16px;
+      height: 16px;
+      background-image: url('../images/icon/star.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}

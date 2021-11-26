@@ -1,0 +1,37 @@
+.header {
+  &__top {
+    background-color: $dark-800;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 3px 0;
+  }
+
+  &__bottom {
+    background-color: $green-900;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+  }
+
+  &__profile-img,
+  &__favorite-img {
+    width: 32px;
+    height: 29px;
+    fill: $white;
+  }
+
+  &__bascet-img {
+    width: 32px;
+    height: 31px;
+    fill: $white;
+  }
+}

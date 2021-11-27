@@ -1,0 +1,9 @@
+.address {
+  &__link {
+    display: block;
+
+    &--tel {
+      margin-bottom: 17px;
+    }
+  }
+}

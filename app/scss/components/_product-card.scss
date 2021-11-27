@@ -1,0 +1,158 @@
+.product-card {
+  position: relative;
+  max-width: 300px;
+  padding: 56px 0 13px;
+  text-align: left;
+  background-color: $white;
+  border: 1px solid rgba(17, 17, 17, 0.2);
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+
+  &:hover {
+    border-color: $green-900;
+  }
+
+  &__favorite {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 44px;
+    height: 44px;
+    padding: 9px 6px 6px;
+    background-color: tansparent;
+
+    &:focus {
+      box-shadow: 0 0 0 3px #E0EDCF;
+      border-radius: 3px;
+    }
+
+    &:active path {
+      fill: rgba($yellow-900, 0.5);
+    }
+  }
+
+  &__favorite-img {
+    width: 32px;
+    height: 28px;
+    fill: $silver-600;
+    transition: fill 0.3s;
+
+    &:hover {
+      fill: $yellow-900;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    max-width: 300px;
+    max-height: 225px;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: opacity 0.3s, background-color 0.3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: transparent;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 48px;
+      height: 48px;
+      background-image: url('../images/icon/search-green.svg');
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+      background-position: center;
+      background-color: $white;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+
+    &:hover::before {
+      background-color: rgba(black, 0.1);
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
+  &__info {
+    padding: 0 18px;
+  }
+
+  &__subtitle {
+    height: 60px;
+    margin-bottom: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: left;
+    letter-spacing: 0.03em;
+    color: $dark-900;
+    @include line-clamp(14, 1.4, 3);
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  &__price {
+    font-size: 14px;
+    line-height: 1;
+    color: $dark-500;
+    letter-spacing: 0.03em;
+
+    &--old {
+      position: relative;
+      margin-bottom: 3px;
+      color: $silver-600;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        width: 45px;
+        height: 1px;
+        background-color: $silver-600;
+        transform: rotate(-15deg);
+      }
+    }
+  }
+
+  &__basket {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+    text-align: center;
+    border-radius: 3px;
+  }
+
+  &__bascet-img {
+    width: 16px;
+    height: 16px;
+    fill: $white;
+  }
+}

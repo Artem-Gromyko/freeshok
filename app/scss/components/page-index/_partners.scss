@@ -1,0 +1,27 @@
+.partners {
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__item {
+    cursor: pointer;
+    transition: opacity 0.7s;
+
+    // &:not(:last-child) {
+    //   margin-right: 140px;
+    // }
+
+    &:hover {
+      g {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__images {
+    text-align: center;
+  }
+}

@@ -1,0 +1,35 @@
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 37px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  &__btn {
+    padding: 11px 10px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid transparent;
+    text-transform: uppercase;
+    transition: color 0.3s, box-shadow 0.3s, border-bottom 0.3s;
+
+    &:hover {
+      color: $green-900;
+    }
+
+    &:active {
+      border-bottom: 1px solid rgba(99, 166, 14, 0.2);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px #E0EDCF;
+      border-radius: 3px;
+      color: $dark-500;
+    }
+  }
+}

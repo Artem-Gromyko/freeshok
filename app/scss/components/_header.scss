@@ -20,6 +20,19 @@
     justify-content: space-between;
     align-items: center;
     padding: 25px 0;
+
+    @include r(1250) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__catalog {
+    margin-right: 20px;
+
+    @include r(1250) {
+      margin-top: 20px;
+      order: 1;
+    }
   }
 
   &__profile-img,

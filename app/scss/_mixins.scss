@@ -19,7 +19,7 @@
 }
 
 @mixin r($width) {
-  @media only screen and (max-width: $width+ "px") {
+  @media (max-width: #{$width}px) {
     @content;
   }
 }

@@ -1,6 +1,18 @@
 .menu {
   display: flex;
 
+  // @include r(992) {
+  //   display: none;
+  // }
+
+  &__btn {
+    display: none;
+
+    // @include r(992) {
+    //   display: block;
+    // }
+  }
+
   &__item {
     &:not(:last-child) {
       margin-right: 24px;

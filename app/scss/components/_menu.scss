@@ -1,21 +1,29 @@
 .menu {
   display: flex;
 
-  // @include r(992) {
-  //   display: none;
-  // }
-
   &__btn {
     display: none;
 
-    // @include r(992) {
-    //   display: block;
-    // }
+    @include r(992) {
+      display: block;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 24px;
+    }
+
+    @include r(992) {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &--right {
+    @include r(992) {
+      display: none;
     }
   }
 
@@ -36,6 +44,10 @@
       padding-right: 22px;
       padding-left: 44px;
       background-image: url('../images/icon/delivery.svg');
+
+      @include r(992) {
+        padding-right: 0;
+      }
     }
 
     &--tel {
@@ -43,6 +55,10 @@
       padding-left: 37px;
       background-size: 34px 22px;
       background-image: url('../images/icon/tel.svg');
+
+      @include r(992) {
+        padding-right: 0;
+      }
     }
 
     &:hover {
@@ -53,5 +69,10 @@
       box-shadow: 0 0 0 3px #EFF6E7;
       border-radius: 3px;
     }
+
+    @include r(992) {
+      font-size: 0;
+    }
+
   }
 }

@@ -1,11 +1,13 @@
 .form-search {
+  position: relative;
   display: flex;
   max-width: 576px;
   width: 100%;
+
   &__input {
     max-width: 419px;
     width: 100%;
-    padding: 0 15px 0 51px;
+    padding: 12px 15px 12px 51px;
     font-size: 18px;
     border-radius: 6px 0 0 6px;
     border: none;
@@ -15,6 +17,7 @@
     background-repeat: no-repeat;
     background-position: 12px 16px;
     box-shadow: 0 0 0 4px rgba(99, 166, 14, 0.2);
+
     &::placeholder {
       font-family: 'OpenSans', sans-serif;
       font-weight: 400;
@@ -23,12 +26,22 @@
       letter-spacing: 0.03em;
       color: $dark-800;
     }
+
     &:focus {
       box-shadow: 0 0 0 4px rgba($white, 0.5);
       border-radius: 6px 0 0 6px;
     }
+
+    @include r(1238) {
+      max-width: 100%;
+      width: 100%;
+      border-radius: 6px;
+    }
   }
+
   &__btn {
+    position: absolute;
+    right: 0;
     padding: 15px 52px 15px 53px;
     font-weight: 600;
     text-transform: uppercase;
@@ -37,9 +50,11 @@
     color: $white;
     border-radius: 0 6px 6px 0;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s ease;
+
     &:hover {
       background-color: rgba(49, 53, 43, 0.85);
     }
+
     &:focus {
       box-shadow: 0 0 0 4px rgba($white, 0.5);
       border-radius: 0 6px 6px 0;
@@ -48,5 +63,29 @@
     &:active {
       color: rgba($white, 0.5);
     }
+  }
+
+  &.active {
+    transform: translateX(0);
+    border-radius: 0;
+
+    .form-search__btn {
+      border-radius: 0;
+    }
+  }
+
+  @include r(1238) {
+    max-width: 66%;
+    margin-top: 20px;
+    order: 4;
+  }
+
+  @include r(768) {
+    position: absolute;
+    top: 111px;
+    left: 0;
+    max-width: 100%;
+    border: 1px solid #000;
+    transform: translateX(-200%);
   }
 }

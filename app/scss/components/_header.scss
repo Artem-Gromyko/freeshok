@@ -21,30 +21,49 @@
     align-items: center;
     padding: 25px 0;
 
-    @include r(1250) {
+    @include r(1238) {
       flex-wrap: wrap;
+    }
+
+    @include r(768) {
+      padding: 10px 0;
     }
   }
 
   &__catalog {
+    position: relative;
+    display: block;
+    width: 240px;
     margin-right: 20px;
 
-    @include r(1250) {
-      margin-top: 20px;
-      order: 1;
+    &:hover {
+      .catalog__list {
+        display: block;
+        transform: translateY(0px);
+        transition-duration: 0.4s linear;
+      }
     }
-  }
 
-  &__profile-img,
-  &__favorite-img {
-    width: 32px;
-    height: 29px;
-    fill: $white;
-  }
+    &:hover {
+      .catalog__btn {
+        background-color: $green-200;
+        border-radius: 6px 6px 0 0;
 
-  &__bascet-img {
-    width: 32px;
-    height: 31px;
-    fill: $white;
+        .arrowdown-icon {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    @include r(1238) {
+      width: 30%;
+      margin-top: 20px;
+      margin-right: 0;
+      order: 3;
+    }
+
+    @include r(768) {
+      display: none;
+    }
   }
 }

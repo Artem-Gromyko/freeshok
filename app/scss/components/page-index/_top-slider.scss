@@ -3,6 +3,7 @@
   &__item {
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
   }
 
   &__inner {
@@ -108,5 +109,33 @@
     &:focus {
       box-shadow: none;
     }
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slick-dots li:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  .slick-dots .slick-active button {
+    width: 10px;
+    height: 10px;
+    background-color: $green-900;
+    border: 1px solid transparent;
+  }
+
+  .slick-dots button {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    font-size: 0;
+    background-color: $white;
+    border: 1px solid $silver-600;
+    border-radius: 50%;
+    
   }
 }

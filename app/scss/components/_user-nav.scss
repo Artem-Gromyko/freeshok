@@ -2,13 +2,30 @@
   display: flex;
 
   &__item {
+
+    &--search {
+      display: none;
+
+      @include r(768) {
+        display: block;
+      }
+    }
+
+    &--profile {
+      @include r(992) {
+        display: none;
+      }
+    }
+
+    &--favorite {
+      @include r(768) {
+        display: none;
+      }
+    }
+
     &:not(:last-child) {
       margin-right: 11px;
     }
-  }
-
-  &__img {
-    fill: $white;
   }
 
   &__btn {
@@ -36,6 +53,25 @@
     }
   }
 
+  &__profile-img,
+  &__favorite-img {
+    width: 32px;
+    height: 29px;
+    fill: $white;
+  }
+
+  &__bascet-img {
+    width: 32px;
+    height: 31px;
+    fill: $white;
+  }
+
+  &__search-img {
+    width: 24px;
+    height: 24px;
+    fill: $white;
+  }
+
   &__num {
     position: absolute;
     top: 3px;
@@ -49,4 +85,13 @@
     color: $red-900;
     background-color: $white;
   }
+
+  @include r(1238) {
+    justify-content: flex-end;
+    width: 70%;
+  }
+
+   @include r(768) {
+     width: 10%;
+   }
 }

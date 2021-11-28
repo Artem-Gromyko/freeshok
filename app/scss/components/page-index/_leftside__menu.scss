@@ -1,4 +1,156 @@
-.leftside__menu {
+.leftside-menu {
   position: absolute;
-  display: none;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 5;
+  max-width: 300px;
+  width: 100%;
+  background-color: $white;
+  border: 1px solid rgba(193, 193, 193, 0.3);
+  transition-duration: 0.4s;
+
+  &.leftside-menu--close {
+    transform: translateX(-100%);
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 26px 26px 15px;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    margin-left: -10px;
+    padding: 9px 15px 7px;
+    background-color: $green-900;
+    color: $white;
+  }
+
+  &__profile-img {
+    width: 25px;
+    height: 32px;
+    fill: $white;
+  }
+
+  &__link {
+    position: relative;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 1;
+
+    &--line::after {
+      content: "|";
+      position: absolute;
+      right: -5px;
+    }
+  }
+
+  &__catalog {
+    position: relative;
+
+    @include r(1238) {
+      display: none;
+    }
+
+    @include r(768) {
+      display: block;
+    }
+  }
+
+  &__catalog-list {
+    transition-duration: 0.3s;
+
+    &.leftside-menu__catalog-list--active {
+      transform: translateY(0);
+    }
+  }
+  
+  .catalog__item {
+    width: 300px;
+  }
+
+  .catalog__btn {
+    font-size: 18px;
+    line-height: 1;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+    color: $dark-800;
+  }
+
+  .catalog-icon {
+    fill: $dark-800;
+  }
+
+  .social__icon {
+    fill: $dark-800;
+  }
+
+  &__contacts {
+    padding: 24px 15px;
+    border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+  }
+
+  &__address {
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
+
+  &__address-link {
+    position: relative;
+    display: block;
+    margin-bottom: 18px;
+    padding-left: 40px;
+    font-size: 18px;
+    line-height: 1;
+
+    &--tel,
+    &--address {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 24px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+
+    &--tel {
+      &::before {
+        height: 23px;
+        background-image: url('../images/icon/tel-black.svg');
+      }
+    }
+
+    &--address {
+      line-height: 1.1;
+
+      &::before {
+        height: 32px;
+        background-image: url('../images/icon/map.svg');
+      }
+    }
+  }
+
+  &__menu-list {
+    display: flex;
+    flex-direction: column;
+    padding: 17px 0 16px;
+  }
+
+  &__menu-link {
+    padding: 7px 15px 8px 15px;
+    font-size: 18px;
+    line-height: 1.1;
+
+  }
+
+  .menu-list__link {
+    color: $dark-800;
+  }
 }

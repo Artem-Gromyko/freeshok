@@ -12,6 +12,21 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
     margin-bottom: 48px;
+
+    @include r(1340) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      justify-items: center;
+    }
+
+    @include r(992) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px;
+    }
+
+    @include r(768) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__card {
@@ -24,7 +39,13 @@
     z-index: 1;
   }
 
+  &__img {
+    object-fit: cover;
+  }
+
+
   &__link {
+    display: block;
     width: 100px;
     height: 100px;
     margin-right: 12px;

@@ -3,9 +3,17 @@
 
   &__inner {
     display: grid;
-    grid-template-columns: 630px 300px 300px;
+    grid-template-columns: minmax(300px, 630px) 300px 300px;
     grid-template-rows: 300px;
     grid-gap: 30px;
+
+    @include r(1238) {
+      grid-gap: 15px;
+    }
+
+    @include r(992) {
+      display: block;
+    }
   }
 
   &__item {
@@ -34,6 +42,26 @@
         }
       }
     }
+
+    &:not(:last-child) {
+      @include r(992) {
+        margin-bottom: 15px;
+      }
+    }
+
+    @include r(1238) {
+      padding-left: 20px;
+    }
+
+    @include r(992) {
+      padding: 76px 20px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    @include r(575) {
+      padding-bottom: 30px;
+    }
   }
 
   &__subtitle {
@@ -42,6 +70,10 @@
     font-size: 12px;
     line-height: 1;
     letter-spacing: 0.1em;
+
+    @include r(575) {
+      margin-bottom: 15px;
+    }
   }
 
   &__title {
@@ -52,6 +84,12 @@
     font-size: 30px;
     line-height: 1.4;
     @include line-clamp(30, 1.4, 2);
+
+    @include r(575) {
+      margin-bottom: 77px;
+      font-size: 24px;
+      @include line-clamp(24, 1.4, 2);
+    }
   }
 
   &__link {
@@ -69,5 +107,9 @@
       height: 2px;
       background-color: $dark-500;
     }
+  }
+
+  @include r(575) {
+    padding-bottom: 48px;
   }
 }

@@ -13,6 +13,9 @@
 
   &__bottom {
     background-color: $green-900;
+    @include r(768) {
+      height: 62px;
+    }
   }
 
   &__wrapper {
@@ -23,47 +26,12 @@
 
     @include r(1238) {
       flex-wrap: wrap;
+      padding: 15px 0;
     }
 
     @include r(768) {
+      align-items: start;
       padding: 10px 0;
-    }
-  }
-
-  &__catalog {
-    position: relative;
-    display: block;
-    width: 240px;
-    margin-right: 20px;
-
-    &:hover {
-      .catalog__list {
-        display: block;
-        transform: translateY(0px);
-        transition-duration: 0.4s linear;
-      }
-    }
-
-    &:hover {
-      .catalog__btn {
-        background-color: $green-200;
-        border-radius: 6px 6px 0 0;
-
-        .arrowdown-icon {
-          transform: rotate(180deg);
-        }
-      }
-    }
-
-    @include r(1238) {
-      width: 30%;
-      margin-top: 20px;
-      margin-right: 0;
-      order: 3;
-    }
-
-    @include r(768) {
-      display: none;
     }
   }
 }

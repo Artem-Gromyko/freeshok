@@ -62,15 +62,22 @@
   }
 
   &__catalog-list {
-    transition-duration: 0.3s;
+    position: absolute;
+    z-index: 2;
+    transform: translateY(-200%);
+    opacity: 0;
+    transition: transform 0.4s ease;
+
 
     &.leftside-menu__catalog-list--active {
       transform: translateY(0);
+      opacity: 1;
+      transition: opacity 0.4s;
     }
   }
   
   .catalog__item {
-    width: 300px;
+    width: 297px;
   }
 
   .catalog__btn {
@@ -131,7 +138,7 @@
       line-height: 1.1;
 
       &::before {
-        height: 32px;
+        height: 35px;
         background-image: url('../images/icon/map.svg');
       }
     }

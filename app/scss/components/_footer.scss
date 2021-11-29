@@ -10,6 +10,14 @@
   &__logo {
     display: block;
     margin-bottom: 29px;
+
+    @include r(992) {
+      margin: 0 auto 60px;
+    }
+
+    @include r(768) {
+      margin: 0 auto 24px;
+    }
   }
 
   &__items {
@@ -17,6 +25,16 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 22px;
+
+    @include r(992) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+     @include r(768) {
+       flex-direction: column-reverse;
+       align-items: center;
+     }
   }
 
   &__subtitle {
@@ -26,11 +44,23 @@
   }
 
   &__subscribe {
-    margin-right: 60px;
+    margin-right: 110px;
+
+     @include r(992) {
+       margin-right: 0;
+     }
+
+     @include r(768) {
+       margin-right: 0;
+       padding-top: 24px;
+     }
   }
 
   &__form {
+    position: relative;
+    top: 0;
     max-width: 306px;
+    transform: translateX(0);
   }
 
   &__input {
@@ -40,6 +70,10 @@
     color: $dark-300;
     background-image: none;
     box-shadow: none;
+
+    @include r(1238) {
+      border-radius: 6px 0 0 6px;
+    }
   }
 
   &__btn {
@@ -58,6 +92,15 @@
 
   &__contacts {
     max-width: 215px;
+
+    @include r(992) {
+      margin-top: 30px;
+    }
+
+    @include r(768) {
+      margin-top: 0;
+      padding-bottom: 24px;
+    }
   }
 
   &__address {
@@ -69,6 +112,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 25px 0;
+
+    @include r(768) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
   }
 
   &__copy-text {
@@ -77,6 +125,10 @@
 
   &__cards {
     display: flex;
+
+    @include r(768) {
+      margin-bottom: 24px;
+    }
   }
 
   &__cards-item {

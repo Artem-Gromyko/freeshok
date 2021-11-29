@@ -89,6 +89,16 @@
 
   &__img {
     object-fit: cover;
+
+    @include r(992) {
+      width: 230px;
+      height: 150px;
+    }
+
+    @include r(575) {
+      width: 168px;
+      height: 126px;
+    }
   }
 
   &__info {

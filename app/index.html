@@ -207,7 +207,7 @@
                </picture>
              </a>
 
-             <div class="header__catalog">
+             <div class="catalog">
 
                <button class="catalog__btn" type="button">
                  <svg class="catalog-icon">
@@ -258,7 +258,7 @@
                </ul>
              </div>
 
-             <form class="form-search header__form-search header__form-search--open" action="#">
+             <form class="form-search header__form-search" action="#">
                <label class="form-search__label" for="search">
                  <span class="sr-only">форма поиска по сайту</span>
                </label>
@@ -323,65 +323,72 @@
     <h2 class="sr-only">акции и скидки</h2>
 
     <ul class="top-slider__wrapper">
-      
-      <li class="top-slider__item" style="background-image: url('images/slider/slider-bg1.jpg');">
-        <div class="container">
-          <div class="top-slider__inner">
-            <div class="top-slider__content">
-              <h3 class="top-slider__title">
-                Свежачок вам в хату
-                <span class="top-slider__promotion">Скидка -50%</span>
-              </h3>
-              <div class="top-slider__text">
-                <p>
-                  Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
-                </p>
-              </div>
-              <a class="btn top-slider__btn" href="#">
-                Купить сейчас
-              </a>
-            </div>
-          </div>
-        </div>
-      </li>
 
-      <li class="top-slider__item" style="background-image: url('images/slider/slider-bg2.jpg');">
-        <div class="container">
-          <div class="top-slider__inner">
-            <div class="top-slider__content">
-              <h3 class="top-slider__title">
-                Накрути себе томатов
-                <span class="top-slider__promotion">Акция: 3 кг по цене 1</span>
-              </h3>
-              <div class="top-slider__text">
-                <p>
-                  Только с 12 по 15 июля скидка на домашние помидорчики
-                </p>
+      <div>
+        <li class="top-slider__item" style="background-image: url('images/slider/slider-bg1.jpg');">
+          <div class="top-slider__container">
+            <div class="top-slider__inner">
+              <div class="top-slider__content">
+                <h3 class="top-slider__title">
+                  Свежачок вам в хату
+                  <span class="top-slider__promotion">Скидка -50%</span>
+                </h3>
+                <div class="top-slider__text">
+                  <p>
+                    Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+                  </p>
+                </div>
+                <a class="btn top-slider__btn" href="#">
+                  Купить сейчас
+                </a>
               </div>
-              <a class="btn top-slider__btn" href="#">
-                Купить сейчас
-              </a>
             </div>
           </div>
-        </div>
-      </li>
+        </li>
+      </div>
 
-      <li class="top-slider__item" style="background-image: url('images/slider/slider-bg3.jpg');">
-        <div class="container">
-          <div class="top-slider__inner">
-            <div class="top-slider__content">
-              <h3 class="top-slider__title">
-                Пусть остальные
-                позеленеют от зависти
-                <span class="top-slider__promotion">Распродажа зелени</span>
-              </h3>
-              <a class="btn top-slider__btn" href="#">
-                Купить сейчас
-              </a>
+      <div>
+        <li class="top-slider__item" style="background-image: url('images/slider/slider-bg2.jpg');">
+          <div class="top-slider__container">
+            <div class="top-slider__inner">
+              <div class="top-slider__content">
+                <h3 class="top-slider__title">
+                  Накрути себе томатов
+                  <span class="top-slider__promotion">Акция: 3 кг по цене 1</span>
+                </h3>
+                <div class="top-slider__text">
+                  <p>
+                    Только с 12 по 15 июля скидка на домашние помидорчики
+                  </p>
+                </div>
+                <a class="btn top-slider__btn" href="#">
+                  Купить сейчас
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </li>
+        </li>
+      </div>
+
+      <div>
+        <li class="top-slider__item" style="background-image: url('images/slider/slider-bg3.jpg');">
+          <div class="top-slider__container">
+            <div class="top-slider__inner">
+              <div class="top-slider__content">
+                <h3 class="top-slider__title">
+                  Пусть остальные
+                  позеленеют от зависти
+                  <span class="top-slider__promotion">Распродажа зелени</span>
+                </h3>
+                <a class="btn top-slider__btn" href="#">
+                  Купить сейчас
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </div>
+
     </ul>
 
   </section>
@@ -856,7 +863,8 @@
             </div>
 
             <a class="product-card__link promoution__link" href="#">
-              <img class="product-card__img" src="images/content/promoution/pineapple-2.jpg" alt="ананас" width="100"
+              <img class="promoution__img" src="images/content/promoution/pineapple-2.jpg" alt="ананас"
+                width="100"
                 height="100">
             </a>
 
@@ -894,7 +902,7 @@
             </div>
 
             <a class="product-card__link  promoution__link" href="#">
-              <img class="product-card__img promoution__img" src="images/content/products/coffee.jpg"
+              <img class="promoution__img" src="images/content/products/coffee.jpg"
                 alt="кофе с коноплей" width="100" height="100">
             </a>
 
@@ -932,7 +940,8 @@
             </div>
 
             <a class="product-card__link promoution__link" href="#">
-              <img class="product-card__img" src="images/content/promoution/strawberry.jpg" alt="клубника" width="100"
+              <img class="promoution__img" src="images/content/promoution/strawberry.jpg"
+                alt="клубника" width="100"
                 height="100">
             </a>
 
@@ -970,7 +979,7 @@
             </div>
 
             <a class="product-card__link promoution__link" href="#">
-              <img class="product-card__img" src="images/content/promoution/mango.jpg" alt="манго">
+              <img class="promoution__img" src="images/content/promoution/mango.jpg" alt="манго">
             </a>
 
             <div class="product-card__info promoution__info">
@@ -1007,7 +1016,8 @@
             </div>
 
             <a class="product-card__link promoution__link" href="#">
-              <img class="product-card__img" src="images/content/promoution/salmon.jpg" alt="лосось" width="100"
+              <img class="promoution__img" src="images/content/promoution/salmon.jpg" alt="лосось"
+                width="100"
                 height="100">
             </a>
 
@@ -1045,7 +1055,8 @@
             </div>
 
             <a class="product-card__link promoution__link" href="#">
-              <img class="product-card__img" src="images/content/promoution/veg-juice.jpg" alt="сок" width="100"
+              <img class="promoution__img" src="images/content/promoution/veg-juice.jpg" alt="сок"
+                width="100"
                 height="100">
             </a>
 
@@ -1083,7 +1094,8 @@
             </div>
 
             <a class="product-card__link promoution__link" href="#">
-              <img class="product-card__img" src="images/content/promoution/basket-fruits.jpg" alt="корзина с фруктами"
+              <img class="promoution__img" src="images/content/promoution/basket-fruits.jpg"
+                alt="корзина с фруктами"
                 width="100" height="100">
             </a>
 
@@ -1121,7 +1133,8 @@
             </div>
 
             <a class="product-card__link promoution__link" href="#">
-              <img class="product-card__img" src="images/content/promoution/pig.jpg" alt="свинина" width="100"
+              <img class="promoution__img" src="images/content/promoution/pig.jpg" alt="свинина"
+                width="100"
                 height="100">
             </a>
 
@@ -1159,44 +1172,50 @@
     <section class="partners section-page">
   <h2 class="sr-only">блок с партнерами</h2>
   <div class="container">
-    <ul class="partners__items">
+    <ul class="partners-slider">
 
       <li class="partners__item">
         <div class="partners__images">
-          <img src="images/partners/sprite.svg" alt="sprite">
+          <img src="images/partners/sprite.svg" alt="sprite" width="80" height="33">
         </div>
       </li>
 
       <li class="partners__item">
         <div class="partners__images">
-          <img src="images/partners/dr-pepper.svg" alt="dr-pepper">
+          <img src="images/partners/dr-pepper.svg" alt="dr-pepper" width="80" height="57">
         </div>
       </li>
 
       <li class="partners__item">
         <div class="partners__images">
-          <img src="images/partners/coca-cola.svg" alt="coca-cola">
+          <img src="images/partners/coca-cola.svg" alt="coca-cola" width="80" height="26">
         </div>
       </li>
 
       <li class="partners__item">
         <div class="partners__images">
-          <img src="images/partners/pepsi.svg" alt="pepsi">
+          <img src="images/partners/pepsi.svg" alt="pepsi" width="80" height="30">
         </div>
       </li>
 
       <li class="partners__item">
         <div class="partners__images">
-          <img src="images/partners/redbull.svg" alt="redbull">
+          <img src="images/partners/redbull.svg" alt="redbull" width="80" height="48">
         </div>
       </li>
 
       <li class="partners__item">
         <div class="partners__images">
-          <img src="images/partners/fanta.svg" alt="fanta">
+          <img src="images/partners/fanta.svg" alt="fanta" width="80" height="59">
         </div>
       </li>
 
+      <li class="partners__item">
+        <div class="partners__images">
+          <img src="images/partners/sprite.svg" alt="sprite" width="80" height="33">
+        </div>
+      </li>
+      
     </ul>
   </div>
 </section>
@@ -1214,7 +1233,7 @@
 
       <li class="our-news__item">
         <div class="our-news__images">
-          <a href="#">
+          <a class="our-news__img-link" href="#">
             <img class="our-news__img" src="images/content/our-news/season-fruits.jpg" alt="сезонные фрукты" width="410"
               height="240">
           </a>
@@ -1231,7 +1250,7 @@
 
       <li class="our-news__item">
         <div class="our-news__images">
-          <a href="#">
+          <a class="our-news__img-link" href="#">
             <img class="our-news__img" src="images/content/our-news/mango.jpg" alt="манго" width="410" height="240">
           </a>
           <div class="our-news__date">
@@ -1247,7 +1266,7 @@
 
       <li class="our-news__item">
         <div class="our-news__images">
-          <a href="#">
+          <a class="our-news__img-link" href="#">
             <img class="our-news__img" src="images/content/our-news/papaya.jpg" alt="папайя" width="410" height="240">
           </a>
           <div class="our-news__date">

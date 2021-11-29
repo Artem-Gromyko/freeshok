@@ -1,12 +1,19 @@
 .menu-list {
   column-count: 3;
-  column-gap: 77px;
+  column-gap: 59px;
 
   &__item {
     margin-bottom: 18px;
+
+    @include r(768) {
+      padding-top: 4px;
+      margin-bottom: 6px;
+    }
   }
 
   &__link {
+    display: inline-block;
+    padding: 13px 5px;
     font-size: 14px;
     line-height: 1.4;
     color: $white;
@@ -20,5 +27,16 @@
       box-shadow: 0 0 0 3px #EFF6E7;
       border-radius: 3px;
     }
+  }
+
+  @include r(1238) {
+    column-count: 2;
+    column-gap: 33px;
+  }
+
+  @include r(768) {
+    column-gap: 51px;
+    margin-left: 62px;
+    padding: 24px 0;
   }
 }

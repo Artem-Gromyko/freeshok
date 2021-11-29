@@ -1,5 +1,6 @@
 .filter {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 37px;
 
@@ -31,5 +32,15 @@
       border-radius: 3px;
       color: $dark-500;
     }
+
+    @include r(575) {
+      font-size: 14px;
+    }
   }
+
+  @include r(575) {
+    margin: 0 auto 24px;
+    max-width: 300px;
+  }
+
 }

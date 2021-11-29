@@ -1,11 +1,19 @@
 .our-news {
   padding-bottom: 72px;
 
+  @include r(575) {
+    padding-bottom: 48px;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 33px;
+
+    @include r(992) {
+      display: block;
+    }
   }
 
   &__title {
@@ -20,6 +28,10 @@
     border-bottom: 2px solid $green-900;
     text-transform: uppercase;
     transition: color 0.3s;
+
+    @include r(575) {
+      line-height: 1.3;
+    }
 
     &:hover {
       color: #4D800C;
@@ -40,6 +52,10 @@
   &__items {
     display: flex;
     justify-content: space-between;
+
+    @include r(992) {
+      display: block;
+    }
   }
 
   &__item {
@@ -47,15 +63,47 @@
     padding-bottom: 18px;
     box-shadow: 0 3px 3px rgba($black, 0.25);
     border-radius: 6px;
+
+    &:not(:last-child) {
+      @include r(992) {
+        margin-bottom: 25px;
+      }
+
+      @include r(575) {
+        margin-bottom: 15px;
+      }
+    }
+
+    @include r(1340) {
+      width: 31%;
+    }
+
+    @include r(992) {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    @include r(575) {
+      padding-bottom: 15px;
+    }
   }
 
   &__images {
     position: relative;
     margin-bottom: 18px;
+
+    @include r(575) {
+      margin-bottom: 15px;
+    }
   }
 
   &__img {
     object-fit: cover;
+
+    @include r(992) {
+      width: 100%;
+      height: 200px;
+    }
   }
 
   &__date {
@@ -88,11 +136,19 @@
     font-size: 16px;
     line-height: 1.5;
     color: $dark-900;
+    text-transform: none;
     transition: color 0.3s;
-    // @include line-clamp(16, 1.5, 3);
+    @include line-clamp(16, 1.5, 3);
 
     &:hover {
       color: $green-900;
+    }
+
+    @include r(575) {
+      padding: 0 15px;
+      font-size: 14px;
+      line-height: 1.4;
+      @include line-clamp(14, 1.4, 3);
     }
   }
 }

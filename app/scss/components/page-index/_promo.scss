@@ -2,17 +2,11 @@
   padding-bottom: 72px;
 
   &__inner {
-    display: grid;
-    grid-template-columns: minmax(300px, 630px) 300px 300px;
-    grid-template-rows: 300px;
-    grid-gap: 30px;
-
-    @include r(1238) {
-      grid-gap: 15px;
-    }
+    display: flex;
 
     @include r(992) {
-      display: block;
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 
@@ -20,16 +14,39 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 32px;
+    max-width: 300px;
+    width: 100%;
+    padding: 78px 32px;
     text-align: left;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     text-transform: uppercase;
 
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &:not(:last-child) {
+      @include r(1238) {
+        margin-right: 20px;
+      }
+
+      @include r(768) {
+        margin-right: 0;
+      }
+
+      @include r(575) {
+        margin-bottom: 15px;
+      }
+    }
+
     &:nth-child(1) {
+      max-width: 630px;
       color: $white;
       text-shadow: 1px 1px 0 rgba(black, 0.25);
+       background-position: center center;
 
       .promo__title {
         max-width: 400px;
@@ -41,25 +58,25 @@
           background-color: $white;
         }
       }
-    }
 
-    &:not(:last-child) {
       @include r(992) {
+        max-width: 700px;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      @include r(768) {
+        max-width: 100%;
         margin-bottom: 15px;
       }
     }
 
-    @include r(1238) {
-      padding-left: 20px;
-    }
-
-    @include r(992) {
-      padding: 76px 20px;
-      width: 100%;
-      margin: 0 auto;
+    @include r(768) {
+      max-width: 100%;
     }
 
     @include r(575) {
+      padding-left: 15px;
       padding-bottom: 30px;
     }
   }
@@ -81,14 +98,16 @@
     margin-bottom: 12px;
     font-family: 'Ruda', sans-serif;
     font-weight: 600;
-    font-size: 30px;
-    line-height: 1.4;
     @include line-clamp(30, 1.4, 2);
 
+    @include r(1238) {
+      font-size: 27px;
+    }
+
     @include r(575) {
+      width: 260px;
       margin-bottom: 77px;
       font-size: 24px;
-      @include line-clamp(24, 1.4, 2);
     }
   }
 
@@ -107,9 +126,5 @@
       height: 2px;
       background-color: $dark-500;
     }
-  }
-
-  @include r(575) {
-    padding-bottom: 48px;
   }
 }

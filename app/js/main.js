@@ -1,6 +1,6 @@
 $(function () {
 
-  $('.top-slider__wrapper').slick({
+  $('.top-slider__list').slick({
     dots: false,
     arrows: true,
     fade: true,
@@ -18,11 +18,13 @@ $(function () {
   });
 
 
-  $('.partners-slider').slick({
+  $('.partners__slider').slick({
     dots: false,
-    arrows: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
     slidesToShow: 6,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     responsive: [{
         breakpoint: 991,
         settings: {
@@ -35,8 +37,6 @@ $(function () {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          arrows: false,
-          dots: true,
         }
       },
       {
@@ -47,18 +47,17 @@ $(function () {
         }
       }
     ],
-
-    prevArrow: '<button type="button" class="partners-slider__arrow partners-slider__arrow--prev"><svg width="30" height="30" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 7H3.8L9.4 1.4L8 0L0 8L8 16L9.4 14.6L3.8 9H16V7Z"fill="#63A60F"/></svg></button>',
-
-    nextArrow: '<button type="button" class="partners-slider__arrow partners-slider__arrow--next"><svg width="30" height="30" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 7H12.2L6.6 1.4L8 0L16 8L8 16L6.6 14.6L12.2 9H0V7Z" fill="#63A60F"/></svg></button >',
   });
 
 
   $('.menu__btn').on('click', function () {
     $('.leftside-menu').removeClass('leftside-menu--close');
+    $('body').toggleClass('lock');
   });
+
   $('.leftside-menu__close').on('click', function () {
     $('.leftside-menu').addClass('leftside-menu--close');
+    $('body').toggleClass('lock');
   });
 
   $('.user-nav__btn--search').on('click', function () {
@@ -66,7 +65,7 @@ $(function () {
   });
 
   $('.catalog__btn').on('click', function () {
-    $('.leftside-menu__catalog-list').toggleClass('leftside-menu__catalog-list--active');
+    $('.leftside-menu__catalog-list').toggleClass('leftside-menu__catalog-list--active');    
   });
 
 

@@ -1,7 +1,8 @@
 .product-card {
   position: relative;
   max-width: 300px;
-  padding: 56px 0 13px;
+  height: 100%;
+  padding: 56px 0 18px;
   text-align: left;
   background-color: $white;
   border: 1px solid rgba(17, 17, 17, 0.2);
@@ -40,15 +41,19 @@
     &:hover {
       fill: $yellow-900;
     }
+
+    @include r(575) {
+      width: 24px;
+      height: 21px;
+    }
   }
 
   &__link {
     position: relative;
     display: block;
-    max-width: 300px;
-    max-height: 225px;
+    height: 215px;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
     transition: opacity 0.3s, background-color 0.3s;
 
     &::before {
@@ -59,6 +64,10 @@
       bottom: 0;
       left: 0;
       background-color: transparent;
+
+      @include r(768) {
+        display: none;
+      }
     }
 
     &::after {
@@ -76,6 +85,10 @@
       border-radius: 50%;
       transform: translate(-50%, -50%);
       opacity: 0;
+
+      @include r(768) {
+        display: none;
+      }
     }
 
     &:hover::before {
@@ -88,33 +101,31 @@
   }
 
   &__img {
+    
     object-fit: cover;
-
-    @include r(992) {
-      width: 230px;
-      height: 150px;
-    }
-
-    @include r(575) {
-      width: 168px;
-      height: 126px;
-    }
   }
 
   &__info {
     padding: 0 18px;
+
+    @include r(575) {
+      padding: 0 12px;
+    }
   }
 
   &__subtitle {
     height: 60px;
     margin-bottom: 9px;
-    font-size: 14px;
     font-weight: 600;
-    line-height: 1.4;
     text-align: left;
     letter-spacing: 0.03em;
     color: $dark-900;
     @include line-clamp(14, 1.4, 3);
+
+    @include r(575) {
+      height: fit-content;
+      margin-bottom: 48px;
+    }
   }
 
   &__bottom {

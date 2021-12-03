@@ -9,6 +9,7 @@
   background-color: $white;
   border: 1px solid rgba(193, 193, 193, 0.3);
   transition-duration: 0.4s;
+  overflow: auto;
 
   &.leftside-menu--close {
     transform: translateX(-100%);
@@ -21,13 +22,32 @@
     padding: 26px 26px 26px 15px;
   }
 
-  &__links {
+  &__btn {
     display: flex;
     align-items: center;
-    margin-left: -10px;
-    padding: 9px 15px 7px;
+    width: 100%;
+    height: 48px;
     background-color: $green-900;
-    color: $white;
+  }
+
+  &__btn-images {
+    width: 48px;
+    height: 48px;
+    padding: 9px 13px;
+    margin-right: 4px;
+
+    &:hover {
+      background-color: rgba($white, 0.1);
+    }
+
+    &:focus {
+      box-shadow: inset 0 0 0 3px #EFF6E7;
+    }
+
+    &:active {
+      box-shadow: none;
+      opacity: 0.5;
+    }
   }
 
   &__profile-img {
@@ -36,16 +56,14 @@
     fill: $white;
   }
 
-  &__link {
-    position: relative;
-    padding: 10px;
+  &__btn-span {
     font-size: 18px;
     line-height: 1;
+    letter-spacing: 0.03em;
+    color: $white;
 
-    &--line::after {
-      content: "|";
-      position: absolute;
-      right: -5px;
+    &:not(:last-child) {
+      margin-right: 26px;
     }
   }
 
@@ -56,16 +74,13 @@
       display: none;
     }
 
-    @include r(768) {
+    @include r(992) {
       display: block;
     }
   }
 
   &__catalog-list {
-    position: absolute;
-    z-index: 2;
     transform: translateY(-200%);
-    opacity: 0;
     transition: transform 0.4s ease;
 
 
@@ -75,12 +90,13 @@
       transition: opacity 0.4s;
     }
   }
-  
+
   .catalog__item {
-    width: 297px;
+    width: 100%;
   }
 
   .catalog__btn {
+    width: 100%;
     font-size: 18px;
     line-height: 1;
     border-radius: 0;
@@ -88,8 +104,18 @@
     color: $dark-800;
   }
 
+  .catalog__link {
+    &:hover {
+      background-color: $green-200;
+    }
+  }
+
   .catalog-icon {
     fill: $dark-800;
+  }
+
+  .social {
+    justify-content: flex-start;
   }
 
   .social__icon {
@@ -144,20 +170,17 @@
     }
   }
 
-  &__menu-list {
+  .menu-list {
     display: flex;
     flex-direction: column;
-    padding: 17px 0 16px;
-  }
-
-  &__menu-link {
-    padding: 7px 15px 8px 15px;
-    font-size: 18px;
-    line-height: 1.1;
-
+    margin-left: 0;
+    padding: 17px 15px 16px;
   }
 
   .menu-list__link {
+    padding: 7px 0 8px;
+    font-size: 18px;
+    line-height: 1.2;
     color: $dark-800;
   }
 }

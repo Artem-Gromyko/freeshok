@@ -25,6 +25,10 @@
 
     &:not(:last-child) {
       margin-right: 11px;
+
+      @include r(768) {
+        margin-right: 7px;
+      }
     }
   }
 
@@ -64,6 +68,11 @@
     width: 32px;
     height: 31px;
     fill: $white;
+
+    @include r(768) {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &__search-img {
@@ -84,14 +93,10 @@
     border-radius: 9px;
     color: $red-900;
     background-color: $white;
-  }
 
-  @include r(1238) {
-    justify-content: flex-end;
-    width: 70%;
+    @include r(768) {
+      top: 1px;
+      right: 27px;
+    }
   }
-
-   @include r(768) {
-     width: 10%;
-   }
 }

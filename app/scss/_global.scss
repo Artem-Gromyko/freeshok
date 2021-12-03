@@ -5,6 +5,12 @@ body {
   line-height: 1.4;
   background-color: $white;
   color: $dark-500;
+
+  @include r(992) {
+    &.lock {
+      overflow: hidden;
+    }
+  }
 }
 
 .wrapper {
@@ -24,17 +30,14 @@ body {
   padding: 72px 0;
   text-align: center;
 
-   @include r(575) {
-     padding: 48px 0;
-   }
+  @include r(575) {
+    padding: 48px 0;
+  }
 }
 
 .logo__img {
+  max-width: 200px;
   object-fit: cover;
-}
-
-.mixitup-control-active {
-  border-bottom: 3px solid $green-200;
 }
 
 .sr-only {
@@ -51,7 +54,7 @@ body {
 }
 
 .btn {
-  padding: 11px 27px;
+  padding: 12px 27px;
   font-size: 18px;
   line-height: 1.3;
   background-color: $green-900;
@@ -75,14 +78,13 @@ body {
     border-radius: 6px;
   }
 
-    @include r(992) {
-     font-size: 16px;
-    }
+  @include r(992) {
+    font-size: 16px;
+  }
 
-    @include r(768) {
-      padding: 12px 24px;
-      font-size: 14px;
-    }
+  @include r(768) {
+    font-size: 14px;
+  }
 }
 
 .title {

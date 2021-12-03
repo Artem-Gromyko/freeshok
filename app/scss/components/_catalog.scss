@@ -1,7 +1,8 @@
 .catalog {
   position: relative;
   display: block;
-  width: 240px;
+  min-width: 240px;
+  margin-right: 20px;
 
   &__btn {
     position: relative;
@@ -15,14 +16,15 @@
     border-radius: 6px;
     transition: background-color 0.3s, transform 0.5s ease;
 
-    @include r(1238) {
-      width: 100%;
-    }
+    // @include r(1238) {
+    //   width: 100%;
+    // }
   }
 
   &__list {
     position: absolute;
     z-index: 2;
+    height: 100vh;
     transform: translateY(-200%);
     opacity: 0;
     transition: transform 0.4s ease;
@@ -37,9 +39,9 @@
       border-radius: 0 0 6px 6px;
     }
 
-     @include r(1238) {
-       max-width: 100%;
-     }
+    //  @include r(1238) {
+    //    max-width: 100%;
+    //  }
   }
 
   &__link {
@@ -81,13 +83,7 @@
     }
   }
 
-  @include r(1238) {
-    margin-top: 20px;
-    margin-right: 0;
-    order: 3;
-  }
-
-  @include r(768) {
+  @include r(992) {
     display: none;
   }
 }
@@ -107,5 +103,6 @@
   top: 23px;
   width: 7px;
   height: 4px;
+  fill: #7CB238;
   transition: transform 0.3s ease;
 }

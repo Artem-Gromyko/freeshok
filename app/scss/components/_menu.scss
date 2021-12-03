@@ -3,9 +3,38 @@
 
   &__btn {
     display: none;
+    width: 44px;
+    height: 44px;
+    padding: 11px 7px;
 
     @include r(992) {
       display: block;
+
+      span {
+        position: relative;
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: $white;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: $white;
+        }
+
+        &::before {
+          top: 10px;
+        }
+
+        &::after {
+          bottom: 10px;
+        }
+      }
     }
   }
 
@@ -19,6 +48,12 @@
         margin-right: 30px;
       }
     }
+
+    @include r(575) {
+      &:not(:last-child) {
+        margin-right: 14px;
+      }
+    }
   }
 
   &--right {
@@ -28,7 +63,8 @@
   }
 
   &__link {
-    padding: 13px 0;
+    display: block;
+    padding: 14px 0;
     font-weight: 700;
     font-size: 13px;
     line-height: 1.38;
@@ -58,6 +94,10 @@
 
       @include r(992) {
         padding-right: 0;
+      }
+
+      @include r(575) {
+        padding-left: 30px;
       }
     }
 

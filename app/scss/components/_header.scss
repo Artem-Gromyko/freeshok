@@ -8,14 +8,10 @@
     justify-content: space-between;
     align-items: center;
     height: 50px;
-    padding: 3px 0;
   }
 
   &__bottom {
     background-color: $green-900;
-    @include r(768) {
-      height: 62px;
-    }
   }
 
   &__wrapper {
@@ -24,14 +20,8 @@
     align-items: center;
     padding: 25px 0;
 
-    @include r(1238) {
-      flex-wrap: wrap;
-      padding: 15px 0;
-    }
-
     @include r(768) {
-      align-items: start;
-      padding: 10px 0;
+      padding: 9px 0;
     }
   }
 }

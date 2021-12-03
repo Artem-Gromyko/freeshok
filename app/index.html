@@ -20,7 +20,7 @@
            <div class="header__inner">
 
              <button class="menu__btn">
-               <img class="menu__btn-img" src="images/icon/burger.svg" alt="меню бургер" width="30" height="20">
+              <span></span>
              </button>
              <div class="leftside-menu leftside-menu--close">
                <div class="leftside-menu__top">
@@ -32,19 +32,19 @@
                  </button>
                </div>
 
-               <div class="leftside-menu__links">
-                 <a class="leftside-menu__link" href="#">
+               <button class="leftside-menu__btn">
+                 <div class="leftside-menu__btn-images">
                    <svg class="leftside-menu__profile-img">
                      <use xlink:href="images/sprite.svg#user"></use>
                    </svg>
-                 </a>
-                 <a class="leftside-menu__link leftside-menu__link--line" href="#">
+                 </div>
+                 <span class="leftside-menu__btn-span">
                    Вход
-                 </a>
-                 <a class="leftside-menu__link" href="#">
+                 </span>
+                 <span class="leftside-menu__btn-span">
                    Регистрация
-                 </a>
-               </div>
+                 </span>
+               </button>
 
                <div class="leftside-menu__catalog">
                  <button class="catalog__btn" type="button">
@@ -103,7 +103,7 @@
                    </a>
                  </div>
 
-                 <ul class="social">
+                 <ul class="social leftside-menu__social">
                    <li class="social__item">
                      <a class="social__link" href="#">
                        <span class="sr-only">перейти в фейсбук</span>
@@ -322,11 +322,12 @@
     <h1 class="sr-only">Интернет-магазин продовольственных продуктов</h1>
     <h2 class="sr-only">акции и скидки</h2>
 
-    <ul class="top-slider__wrapper">
+    <ul class="top-slider__list">
 
-      <div>
-        <li class="top-slider__item" style="background-image: url('images/slider/slider-bg1.jpg');">
-          <div class="top-slider__container">
+
+      <li class="top-slider__item">
+        <div class="top-slider__wrapper" style="background-image: url('images/slider/slider-bg1.jpg');">
+          <div class="container">
             <div class="top-slider__inner">
               <div class="top-slider__content">
                 <h3 class="top-slider__title">
@@ -344,12 +345,12 @@
               </div>
             </div>
           </div>
-        </li>
-      </div>
+        </div>
+      </li>
 
-      <div>
-        <li class="top-slider__item" style="background-image: url('images/slider/slider-bg2.jpg');">
-          <div class="top-slider__container">
+      <li class="top-slider__item">
+        <div class="top-slider__wrapper" style="background-image: url('images/slider/slider-bg2.jpg');">
+          <div class="container">
             <div class="top-slider__inner">
               <div class="top-slider__content">
                 <h3 class="top-slider__title">
@@ -367,12 +368,12 @@
               </div>
             </div>
           </div>
-        </li>
-      </div>
+        </div>
+      </li>
 
-      <div>
-        <li class="top-slider__item" style="background-image: url('images/slider/slider-bg3.jpg');">
-          <div class="top-slider__container">
+      <li class="top-slider__item">
+        <div class="top-slider__wrapper" style="background-image: url('images/slider/slider-bg3.jpg');">
+          <div class="container">
             <div class="top-slider__inner">
               <div class="top-slider__content">
                 <h3 class="top-slider__title">
@@ -386,8 +387,8 @@
               </div>
             </div>
           </div>
-        </li>
-      </div>
+        </div>
+      </li>
 
     </ul>
 
@@ -474,9 +475,11 @@
               </a>
 
               <div class="product-card__info">
+                
                 <h3 class="product-card__subtitle">
                   Ананас, 1кг
                 </h3>
+
                 <div class="product-card__bottom">
                   <div class="product-card__box">
                     <span class="product-card__price product-card__price--old">1999 ₽</span>
@@ -491,6 +494,7 @@
                     </svg>
                   </button>
                 </div>
+
               </div>
 
             </article>
@@ -1172,7 +1176,7 @@
     <section class="partners section-page">
   <h2 class="sr-only">блок с партнерами</h2>
   <div class="container">
-    <ul class="partners-slider">
+    <ul class="partners__slider">
 
       <li class="partners__item">
         <div class="partners__images">
@@ -1212,7 +1216,7 @@
 
       <li class="partners__item">
         <div class="partners__images">
-          <img src="images/partners/sprite.svg" alt="sprite" width="80" height="33">
+          <img src="images/partners/pepsi.svg" alt="pepsi" width="80" height="30">
         </div>
       </li>
       

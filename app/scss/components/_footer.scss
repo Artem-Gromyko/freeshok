@@ -10,9 +10,11 @@
   }
 
   &__logo {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 24px;
+    @include r(768) {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
   }
 
   &__inner {
@@ -102,25 +104,25 @@
     @include r(768) {
       padding: 24px 0;
       width: 100%;
-    }
 
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 1px;
-      background-color: rgba($white, 0.1);
-    }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 1px;
+        background-color: rgba($white, 0.1);
+      }
 
-    &::before {
-      top: 0;
-    }
+      &::before {
+        top: 0;
+      }
 
-    &::after {
-      bottom: 0;
+      &::after {
+        bottom: 0;
+      }
     }
   }
 

@@ -1,6 +1,11 @@
 .promo {
   padding-bottom: 72px;
 
+  @include r(575) {
+    padding-bottom: 49px;
+  }
+
+
   &__inner {
     display: flex;
 
@@ -35,9 +40,6 @@
 
       @include r(768) {
         margin-right: 0;
-      }
-
-      @include r(575) {
         margin-bottom: 15px;
       }
     }
@@ -46,7 +48,7 @@
       max-width: 630px;
       color: $white;
       text-shadow: 1px 1px 0 rgba(black, 0.25);
-       background-position: center center;
+      background-position: center center;
 
       .promo__title {
         max-width: 400px;

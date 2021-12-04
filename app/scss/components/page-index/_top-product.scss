@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
-    margin-bottom: 48px;
+    margin-bottom: 35px;
 
     @include r(1238) {
       grid-gap: 15px;
@@ -16,13 +16,15 @@
     }
 
     @include r(768) {
-      grid-template-columns: repeat(2, minmax(170px, 300px));
+      grid-template-columns: repeat(2, 42%);
       grid-gap: 10px;
       justify-content: center;
     }
 
     @include r(575) {
+      grid-template-columns: repeat(2, 49%);
       grid-gap: 5px;
+      margin-bottom: 24px;
     }
   }
 

@@ -1,8 +1,10 @@
 .product-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   max-width: 300px;
   height: 100%;
-  padding: 56px 0 18px;
+  padding: 58px 0 18px;
   text-align: left;
   background-color: $white;
   border: 1px solid rgba(17, 17, 17, 0.2);
@@ -51,9 +53,8 @@
   &__link {
     position: relative;
     display: block;
-    height: 215px;
     width: 100%;
-    margin-bottom: 18px;
+    margin-bottom: 19px;
     transition: opacity 0.3s, background-color 0.3s;
 
     &::before {
@@ -98,24 +99,20 @@
     &:hover::after {
       opacity: 1;
     }
+
+    @include r(575) {
+      margin-bottom: 12px;
+    }
   }
 
   &__img {
-    
+    height: 100%;
     object-fit: cover;
-  }
-
-  &__info {
-    padding: 0 18px;
-
-    @include r(575) {
-      padding: 0 12px;
-    }
   }
 
   &__subtitle {
     height: 60px;
-    margin-bottom: 9px;
+    margin: 0 18px 9px;
     font-weight: 600;
     text-align: left;
     letter-spacing: 0.03em;
@@ -124,7 +121,7 @@
 
     @include r(575) {
       height: fit-content;
-      margin-bottom: 48px;
+      margin: 0 12px 49px;
     }
   }
 
@@ -132,6 +129,11 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    margin: auto 16px 0 21px;
+
+    @include r(575) {
+      margin: auto 12px 0;
+    }
   }
 
   &__box {
@@ -175,5 +177,9 @@
     width: 16px;
     height: 16px;
     fill: $white;
+  }
+
+  @include r(575) {
+    padding-bottom: 14px;
   }
 }

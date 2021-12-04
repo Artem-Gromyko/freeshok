@@ -9,29 +9,31 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 33px;
+    margin-bottom: 28px;
+    padding-right: 5px;
 
-    @include r(992) {
+    @include r(768) {
       display: block;
     }
   }
 
   &__title {
     margin-bottom: 0;
+
+    @include r(768) {
+      margin-bottom: 7px;
+    }
   }
 
   &__link {
-    padding-bottom: 2px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     font-weight: 700;
     line-height: 1.3;
     color: $green-900;
     border-bottom: 2px solid $green-900;
     text-transform: uppercase;
     transition: color 0.3s;
-
-    @include r(575) {
-      line-height: 1.3;
-    }
 
     &:hover {
       color: #4D800C;
@@ -47,13 +49,17 @@
       border-bottom: 2px solid transparent;
       color: $green-900;
     }
+
+    @include r(768) {
+      line-height: 1;
+    }
   }
 
   &__items {
     display: flex;
     justify-content: space-between;
 
-    @include r(992) {
+    @include r(768) {
       display: block;
     }
   }
@@ -65,12 +71,12 @@
     border-radius: 6px;
 
     &:not(:last-child) {
-      @include r(992) {
+      @include r(768) {
         margin-bottom: 25px;
       }
 
       @include r(575) {
-        margin-bottom: 15px;
+        margin-bottom: 13px;
       }
     }
 
@@ -78,14 +84,14 @@
       width: 31%;
     }
 
-    @include r(992) {
-      max-width: 100%;
+    @include r(768) {
       width: 100%;
+      margin: 0 auto;
     }
 
-    @include r(575) {
-      padding-bottom: 15px;
-    }
+    // @include r(575) {
+    //   padding-bottom: 15px;
+    // }
   }
 
   &__images {
@@ -100,8 +106,7 @@
   &__img {
     object-fit: cover;
 
-    @include r(992) {
-      width: 100%;
+    @include r(575) {
       height: 200px;
     }
   }
@@ -133,8 +138,6 @@
   &__descr {
     padding: 0 18px;
     font-weight: 600;
-    font-size: 16px;
-    line-height: 1.5;
     color: $dark-900;
     text-transform: none;
     transition: color 0.3s;
@@ -146,8 +149,6 @@
 
     @include r(575) {
       padding: 0 15px;
-      font-size: 14px;
-      line-height: 1.4;
       @include line-clamp(14, 1.4, 3);
     }
   }

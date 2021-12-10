@@ -18,17 +18,21 @@
        <div class="header__top">
          <div class="container">
            <div class="header__inner">
+             <div class="blackout"></div>
 
-             <button class="menu__btn">
-              <span></span>
+             <button class="menu__btn" type="button">
+               <span class="sr-only">кнопка меню</span>
+               <span></span>
              </button>
              <div class="leftside-menu leftside-menu--close">
                <div class="leftside-menu__top">
                  <a class="logo" href="#">
                    <img src="images/icon/logo-green.svg" alt="логотип" width="200" height="60">
                  </a>
-                 <button class="leftside-menu__close">
-                   <img src="images/icon/close-btn.svg" alt="">
+                 <button class="leftside-menu__close" type="button">
+                  <svg class="leftside-menu__close-img">
+                    <use xlink:href="images/sprite.svg#close-btn"></use>
+                  </svg>
                  </button>
                </div>
 
@@ -474,25 +478,33 @@
                   height="215">
               </a>
 
-              <h3 class="product-card__subtitle">
-                Ананас, 1кг
-              </h3>
-
-              <div class="product-card__bottom">
-                <div class="product-card__box">
-                  <span class="product-card__price product-card__price--old">1999 ₽</span>
-                  <span class="product-card__price">999 ₽</span>
-                </div>
-                <button class="product-card__basket btn">
-                  <span class="sr-only">
-                    кнопка корзина в карточке товара
+              <div class="product-card__content">
+                <div class="position-rating product-card__position-rating">
+                  <span class="position position--in">
+                    В наличии
                   </span>
-                  <svg class="bascet-img product-card__bascet-img">
-                    <use xlink:href="images/sprite.svg#bascet"></use>
-                  </svg>
-                </button>
-              </div>
+                  <span class="rating">4.6</span>
+                </div>
 
+                <h3 class="product-card__subtitle">
+                  Ананас, 1кг
+                </h3>
+
+                <div class="product-card__bottom">
+                  <div class="product-card__box">
+                    <span class="product-card__price product-card__price--old">1999 ₽</span>
+                    <span class="product-card__price">999 ₽</span>
+                  </div>
+                  <button class="product-card__basket btn">
+                    <span class="sr-only">
+                      кнопка корзина в карточке товара
+                    </span>
+                    <svg class="bascet-img product-card__bascet-img">
+                      <use xlink:href="images/sprite.svg#bascet"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </article>
           </li>
 
@@ -507,27 +519,36 @@
               </button>
 
               <a class="product-card__link" href="#">
-                <img class="product-card__img" src="images/content/products/lemon.jpg" alt="лемон" width="300" height="215">
+                <img class="product-card__img" src="images/content/products/lemon.jpg" alt="лемон" width="300"
+                  height="215">
               </a>
 
-              <h3 class="product-card__subtitle">
-                Лимон, 1кг
-              </h3>
-
-              <div class="product-card__bottom">
-                <div class="product-card__box">
-                  <span class="product-card__price">199 ₽</span>
-                </div>
-                <button class="product-card__basket btn">
-                  <span class="sr-only">
-                    кнопка корзина в карточке товара
+              <div class="product-card__content">
+                <div class="position-rating product-card__position-rating">
+                  <span class="position position--in">
+                    В наличии
                   </span>
-                  <svg class="bascet-img product-card__bascet-img">
-                    <use xlink:href="images/sprite.svg#bascet"></use>
-                  </svg>
-                </button>
-              </div>
+                  <span class="rating">4.6</span>
+                </div>
 
+                <h3 class="product-card__subtitle">
+                  Лимон, 1кг
+                </h3>
+
+                <div class="product-card__bottom">
+                  <div class="product-card__box">
+                    <span class="product-card__price">199 ₽</span>
+                  </div>
+                  <button class="product-card__basket btn">
+                    <span class="sr-only">
+                      кнопка корзина в карточке товара
+                    </span>
+                    <svg class="bascet-img product-card__bascet-img">
+                      <use xlink:href="images/sprite.svg#bascet"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </article>
           </li>
 
@@ -552,25 +573,33 @@
                   width="300" height="215">
               </a>
 
-              <h3 class="product-card__subtitle">
-                Питахайя красная с белой мякотью, 1шт
-              </h3>
-              <div class="product-card__bottom">
-                <div class="product-card__box">
-                  <div class="product-card__price">
-                    <p class="product-card__new-price">1019 ₽</p>
-                  </div>
-                </div>
-                <button class="product-card__basket btn">
-                  <span class="sr-only">
-                    кнопка корзина в карточке товара
+              <div class="product-card__content">
+                <div class="position-rating product-card__position-rating">
+                  <span class="position position--in">
+                    В наличии
                   </span>
-                  <svg class="bascet-img product-card__bascet-img">
-                    <use xlink:href="images/sprite.svg#bascet"></use>
-                  </svg>
-                </button>
-              </div>
+                  <span class="rating">4.6</span>
+                </div>
 
+                <h3 class="product-card__subtitle">
+                  Питахайя красная с белой мякотью, 1шт
+                </h3>
+                <div class="product-card__bottom">
+                  <div class="product-card__box">
+                    <div class="product-card__price">
+                      <span class="product-card__new-price">1019 ₽</span>
+                    </div>
+                  </div>
+                  <button class="product-card__basket btn">
+                    <span class="sr-only">
+                      кнопка корзина в карточке товара
+                    </span>
+                    <svg class="bascet-img product-card__bascet-img">
+                      <use xlink:href="images/sprite.svg#bascet"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </article>
           </li>
 
@@ -589,23 +618,31 @@
                   height="215">
               </a>
 
-              <h3 class="product-card__subtitle">
-                Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт
-              </h3>
-              <div class="product-card__bottom">
-                <div class="product-card__box">
-                  <p class="product-card__price">600 ₽</p>
-                </div>
-                <button class="product-card__basket btn">
-                  <span class="sr-only">
-                    кнопка корзина в карточке товара
+              <div class="product-card__content">
+                <div class="position-rating product-card__position-rating">
+                  <span class="position position--in">
+                    В наличии
                   </span>
-                  <svg class="bascet-img product-card__bascet-img">
-                    <use xlink:href="images/sprite.svg#bascet"></use>
-                  </svg>
-                </button>
-              </div>
+                  <span class="rating">4.6</span>
+                </div>
 
+                <h3 class="product-card__subtitle">
+                  Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт
+                </h3>
+                <div class="product-card__bottom">
+                  <div class="product-card__box">
+                    <span class="product-card__price">600 ₽</span>
+                  </div>
+                  <button class="product-card__basket btn">
+                    <span class="sr-only">
+                      кнопка корзина в карточке товара
+                    </span>
+                    <svg class="bascet-img product-card__bascet-img">
+                      <use xlink:href="images/sprite.svg#bascet"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </article>
           </li>
 
@@ -628,23 +665,31 @@
                   height="215">
               </a>
 
-              <h3 class="product-card__subtitle">
-                Морковь молодая с бабушкиной грядки, 1кг
-              </h3>
-              <div class="product-card__bottom">
-                <div class="product-card__box">
-                  <span class="product-card__price">49 ₽</span>
-                </div>
-                <button class="product-card__basket btn">
-                  <span class="sr-only">
-                    кнопка корзина в карточке товара
+              <div class="product-card__content">
+                <div class="position-rating product-card__position-rating">
+                  <span class="position position--in">
+                    В наличии
                   </span>
-                  <svg class="bascet-img product-card__bascet-img">
-                    <use xlink:href="images/sprite.svg#bascet"></use>
-                  </svg>
-                </button>
-              </div>
+                  <span class="rating">4.6</span>
+                </div>
 
+                <h3 class="product-card__subtitle">
+                  Морковь молодая с бабушкиной грядки, 1кг
+                </h3>
+                <div class="product-card__bottom">
+                  <div class="product-card__box">
+                    <span class="product-card__price">49 ₽</span>
+                  </div>
+                  <button class="product-card__basket btn">
+                    <span class="sr-only">
+                      кнопка корзина в карточке товара
+                    </span>
+                    <svg class="bascet-img product-card__bascet-img">
+                      <use xlink:href="images/sprite.svg#bascet"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </article>
           </li>
 
@@ -667,24 +712,32 @@
                   height="215">
               </a>
 
-              <h3 class="product-card__subtitle">
-                Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...
-              </h3>
-              <div class="product-card__bottom">
-                <div class="product-card__box">
-                  <span class="product-card__price product-card__price--old">299 ₽</span>
-                  <span class="product-card__price">199 ₽</span>
-                </div>
-                <button class="product-card__basket btn">
-                  <span class="sr-only">
-                    кнопка корзина в карточке товара
+              <div class="product-card__content">
+                <div class="position-rating product-card__position-rating">
+                  <span class="position position--in">
+                    В наличии
                   </span>
-                  <svg class="bascet-img product-card__bascet-img">
-                    <use xlink:href="images/sprite.svg#bascet"></use>
-                  </svg>
-                </button>
-              </div>
+                  <span class="rating">4.6</span>
+                </div>
 
+                <h3 class="product-card__subtitle">
+                  Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...
+                </h3>
+                <div class="product-card__bottom">
+                  <div class="product-card__box">
+                    <span class="product-card__price product-card__price--old">299 ₽</span>
+                    <span class="product-card__price">199 ₽</span>
+                  </div>
+                  <button class="product-card__basket btn">
+                    <span class="sr-only">
+                      кнопка корзина в карточке товара
+                    </span>
+                    <svg class="bascet-img product-card__bascet-img">
+                      <use xlink:href="images/sprite.svg#bascet"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </article>
           </li>
 
@@ -707,23 +760,31 @@
                   alt="кофе с коноплей органический" width="300" height="215">
               </a>
 
-              <h3 class="product-card__subtitle">
-                Кофе с коноплей органический Caffé Salomoni 250г
-              </h3>
-              <div class="product-card__bottom">
-                <div class="product-card__box">
-                  <span class="product-card__price">877 ₽</span>
-                </div>
-                <button class="product-card__basket btn">
-                  <span class="sr-only">
-                    кнопка корзина в карточке товара
+              <div class="product-card__content">
+                <div class="position-rating product-card__position-rating">
+                  <span class="position position--in">
+                    В наличии
                   </span>
-                  <svg class="bascet-img product-card__bascet-img">
-                    <use xlink:href="images/sprite.svg#bascet"></use>
-                  </svg>
-                </button>
-              </div>
+                  <span class="rating">4.6</span>
+                </div>
 
+                <h3 class="product-card__subtitle">
+                  Кофе с коноплей органический Caffé Salomoni 250г
+                </h3>
+                <div class="product-card__bottom">
+                  <div class="product-card__box">
+                    <span class="product-card__price">877 ₽</span>
+                  </div>
+                  <button class="product-card__basket btn">
+                    <span class="sr-only">
+                      кнопка корзина в карточке товара
+                    </span>
+                    <svg class="bascet-img product-card__bascet-img">
+                      <use xlink:href="images/sprite.svg#bascet"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </article>
           </li>
 
@@ -746,23 +807,31 @@
                   width="300" height="215">
               </a>
 
-              <h3 class="product-card__subtitle">
-                Перец оранжевый, 1кг
-              </h3>
-              <div class="product-card__bottom">
-                <div class="product-card__box">
-                  <span class="product-card__price">349 ₽</span>
-                </div>
-                <button class="product-card__basket btn">
-                  <span class="sr-only">
-                    кнопка корзина в карточке товара
+              <div class="product-card__content">
+                <div class="position-rating product-card__position-rating">
+                  <span class="position position--in">
+                    В наличии
                   </span>
-                  <svg class="bascet-img product-card__bascet-img">
-                    <use xlink:href="images/sprite.svg#bascet"></use>
-                  </svg>
-                </button>
-              </div>
+                  <span class="rating">4.6</span>
+                </div>
 
+                <h3 class="product-card__subtitle">
+                  Перец оранжевый, 1кг
+                </h3>
+                <div class="product-card__bottom">
+                  <div class="product-card__box">
+                    <span class="product-card__price">349 ₽</span>
+                  </div>
+                  <button class="product-card__basket btn">
+                    <span class="sr-only">
+                      кнопка корзина в карточке товара
+                    </span>
+                    <svg class="bascet-img product-card__bascet-img">
+                      <use xlink:href="images/sprite.svg#bascet"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </article>
           </li>
 
@@ -858,7 +927,7 @@
                 Ананас, 1кг
               </h3>
 
-              <span class="promoution__condition promoution__condition--in">
+              <span class="promoution__position position position--in">
                 В наличии
               </span>
 
@@ -871,7 +940,7 @@
                     999<span class="currency">₽</span>
                   </span>
                 </div>
-                <span class="promoution__num">4.5</span>
+                <span class="rating">4.5</span>
               </div>
             </div>
           </article>
@@ -896,7 +965,7 @@
                 Кофе с коноплей органический Caffé Salomoni 250г
               </h3>
 
-              <span class="promoution__condition promoution__condition--ends">
+              <span class="promoution__position position position--ends">
                 Заканчивается
               </span>
 
@@ -909,7 +978,7 @@
                     777<span class="currency">₽</span>
                   </span>
                 </div>
-                <span class="promoution__num">4.9</span>
+                <span class="rating">4.9</span>
               </div>
             </div>
           </article>
@@ -935,7 +1004,7 @@
                 Клубника, 1 кг
               </h3>
 
-              <span class="promoution__condition promoution__condition--out">
+              <span class="promoution__position position position--out">
                 Нет в наличии
               </span>
 
@@ -948,7 +1017,7 @@
                     440<span class="currency">₽</span>
                   </span>
                 </div>
-                <span class="promoution__num">5.0</span>
+                <span class="rating">5.0</span>
               </div>
             </div>
           </article>
@@ -972,7 +1041,7 @@
                 Манго, 1 шт
               </h3>
 
-              <span class="promoution__condition promoution__condition--in">
+              <span class="promoution__position position position--in">
                 В наличии
               </span>
 
@@ -985,7 +1054,7 @@
                     660<span class="currency">₽</span>
                   </span>
                 </div>
-                <span class="promoution__num">5.0</span>
+                <span class="rating">5.0</span>
               </div>
             </div>
           </article>
@@ -1011,7 +1080,7 @@
                 Лосось, 1 кг
               </h3>
 
-              <span class="promoution__condition promoution__condition--in">
+              <span class="promoution__position position position--in">
                 В наличии
               </span>
 
@@ -1024,7 +1093,7 @@
                     999<span class="currency">₽</span>
                   </span>
                 </div>
-                <span class="promoution__num">4.5</span>
+                <span class="rating">4.5</span>
               </div>
             </div>
           </article>
@@ -1050,7 +1119,7 @@
                 Сок Granini овощной 100%, 0.5л
               </h3>
 
-              <span class="promoution__condition promoution__condition--ends">
+              <span class="promoution__position position position--ends">
                 Заканчивается
               </span>
 
@@ -1063,7 +1132,7 @@
                     180<span class="currency">₽</span>
                   </span>
                 </div>
-                <span class="promoution__num">4.9</span>
+                <span class="rating">4.9</span>
               </div>
             </div>
           </article>
@@ -1089,7 +1158,7 @@
                 Фруктовая корзина, 1 шт
               </h3>
 
-              <span class="promoution__condition promoution__condition--in">
+              <span class="promoution__position position position--in">
                 В наличии
               </span>
 
@@ -1102,7 +1171,7 @@
                     3990<span class="currency">₽</span>
                   </span>
                 </div>
-                <span class="promoution__num">4.8</span>
+                <span class="rating">4.8</span>
               </div>
             </div>
           </article>
@@ -1128,7 +1197,7 @@
                 Свинина мякоть, 1 кг
               </h3>
 
-              <span class="promoution__condition promoution__condition--in">
+              <span class="promoution__position position position--in">
                 В наличии
               </span>
 
@@ -1141,7 +1210,7 @@
                     499<span class="currency">₽</span>
                   </span>
                 </div>
-                <span class="promoution__num">4.6</span>
+                <span class="rating">4.6</span>
               </div>
             </div>
           </article>
@@ -1296,7 +1365,7 @@
         </div>
 
         <div class="footer__menu">
-          <ul class="menu-list">
+          <ul class="menu-list footer__menu-list">
             <li class="menu-list__item">
               <a class="menu-list__link" href="#">О нас</a>
             </li>

@@ -94,29 +94,8 @@
     }
   }
 
-  &__condition {
-    margin-bottom: 4px;
-    font-weight: 600;
-    font-size: 10px;
-    line-height: 1;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-
-    &--in {
-      color: $green-900;
-    }
-
-    &--ends {
-      color: $red-900;
-    }
-
-    &--out {
-      color: $silver-600;
-    }
-
-    @include r(575) {
-      margin-bottom: 6px;
-    }
+  &__position {
+     margin-bottom: 4px;
   }
 
   &__bottom {
@@ -138,7 +117,7 @@
 
     &--old {
       align-self: end;
-      margin-bottom: 0;
+      margin-bottom: 3px;
       margin-left: 12px;
       font-size: 12px;
 
@@ -146,36 +125,6 @@
         top: 5px;
         width: 39px;
       }
-    }
-  }
-
-  &__num {
-    position: relative;
-    padding-right: 18px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1;
-    letter-spacing: 0.03em;
-
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      width: 16px;
-      height: 16px;
-      background-image: url('../images/icon/star.svg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      @include r(575) {
-        top: -2px;
-        right: 2px;
-      }
-    }
-
-    @include r(575) {
-      padding-right: 21px;
     }
   }
 }

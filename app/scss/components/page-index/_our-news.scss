@@ -12,7 +12,7 @@
     margin-bottom: 28px;
     padding-right: 5px;
 
-    @include r(768) {
+    @include r(575) {
       display: block;
     }
   }
@@ -20,7 +20,7 @@
   &__title {
     margin-bottom: 0;
 
-    @include r(768) {
+    @include r(575) {
       margin-bottom: 7px;
     }
   }
@@ -50,7 +50,7 @@
       color: $green-900;
     }
 
-    @include r(768) {
+    @include r(575) {
       line-height: 1;
     }
   }

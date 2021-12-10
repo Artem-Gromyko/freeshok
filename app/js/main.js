@@ -1,5 +1,81 @@
 $(function () {
 
+  $('.shop-content__filter-btn').on('click', function () {
+    $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
+    $(this).addClass('shop-content__filter-btn--active');
+  });
+
+  $('.button-list').on('click', function () {
+    $('.product-card').addClass('product-card--list');
+    $('.shop-content__inner').addClass('shop-content__nogrid');
+  });
+
+  $('.button-grid').on('click', function () {
+    $('.product-card').removeClass('product-card--list');
+    $('.shop-content__inner').removeClass('shop-content__nogrid');
+  });
+
+
+  $('.select-style').styler();
+
+// filter-price
+  var $range = $(".fillter-price__input"),
+    $inputFrom = $(".fillter-price__from"),
+    $inputTo = $(".fillter-price__to"),
+    instance,
+    min = 0,
+    max = 1000,
+    from = 0,
+    to = 0;
+
+  $range.ionRangeSlider({
+    skin: "round",
+    type: "double",
+    onStart: updateInputs,
+    onChange: updateInputs
+  });
+  instance = $range.data("ionRangeSlider");
+
+  function updateInputs(data) {
+    from = data.from;
+    to = data.to;
+
+    $inputFrom.prop("value", from);
+    $inputTo.prop("value", to);
+  }
+
+  $inputFrom.on("input", function () {
+    var val = $(this).prop("value");
+
+    // validate
+    if (val < min) {
+      val = min;
+    } else if (val > to) {
+      val = to;
+    }
+
+    instance.update({
+      from: val
+    });
+  });
+
+  $inputTo.on("input", function () {
+    var val = $(this).prop("value");
+
+    // validate
+    if (val < from) {
+      val = from;
+    } else if (val > max) {
+      val = max;
+    }
+
+    instance.update({
+      to: val
+    });
+  });
+
+
+
   $('.top-slider__list').slick({
     dots: false,
     arrows: true,
@@ -49,29 +125,75 @@ $(function () {
     ],
   });
 
- $(document).on('click', function (event) {
-   if (!$(event.target).closest(".leftside-menu, .menu__btn").length) {
-     $("body").find(".leftside-menu").addClass("leftside-menu--close");
-     $('body').removeClass('lock');
-   }
- });
+  // menu index.html
+  $(document).on('click', function (event) {
+    if (!$(event.target).closest(".leftside-menu, .menu__btn").length) {
+      $("body").find(".leftside-menu").addClass("leftside-menu--close");
+      $('body').removeClass('lock');
+      $(".blackout").css("display", "none");
+    }
+  });
 
   $('.menu__btn').on('click', function () {
     $('.leftside-menu').removeClass('leftside-menu--close');
     $('body').toggleClass('lock');
+    $(".blackout").css("display", "block");
   });
 
   $('.leftside-menu__close').on('click', function () {
     $('.leftside-menu').addClass('leftside-menu--close');
     $('body').toggleClass('lock');
+    $(".blackout").css("display", "none");
   });
 
+  // header-form
   $('.user-nav__btn--search').on('click', function () {
-    $('.form-search').toggleClass('active');
+    $('.header__form-search').toggleClass('active');
   });
 
+  // catalog in leftside-menu
   $('.catalog__btn').on('click', function () {
     $('.leftside-menu__catalog-list').toggleClass('leftside-menu__catalog-list--active');
+  });
+
+
+  // catalog-page
+  $('.fillter__item-top--category').on('click', function () {
+    $('.fillter-category__list').toggleClass('fillter-category__list--active');
+  });
+
+  $('.fillter__item-top--suggestions').on('click', function () {
+    $('.fillter-suggestions__form').toggleClass('fillter-suggestions__form--active');
+  });
+
+  $('.fillter__item-top--brends').on('click', function () {
+    $('.fillter-brends__form').toggleClass('fillter-brends__form--active');
+  });
+
+  $('.fillter__item-top--price').on('click', function () {
+    $('.fillter-price__form').toggleClass('fillter-price__form--active');
+  });
+
+
+  // shop-filters
+  $(document).on('click', function (event) {
+    if (!$(event.target).closest(".shop__filters, .shop-content__button").length) {
+      $("body").find(".shop__filters").addClass("shop__filters--close");
+      $('body').removeClass('lock');
+      $(".blackout").css("display", "none");
+    }
+  });
+
+  $('.shop-content__button').on('click', function () {
+    $('.shop__filters').toggleClass('shop__filters--close');
+    $('body').toggleClass('lock');
+    $(".blackout").css("display", "block");
+  });
+
+  $('.shop__filters-close').on('click', function () {
+    $('.shop__filters').addClass('shop__filters--close');
+    $('body').toggleClass('lock');
+    $(".blackout").css("display", "none");
   });
 
 

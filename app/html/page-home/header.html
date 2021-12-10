@@ -4,17 +4,21 @@
        <div class="header__top">
          <div class="container">
            <div class="header__inner">
+             <div class="blackout"></div>
 
-             <button class="menu__btn">
-              <span></span>
+             <button class="menu__btn" type="button">
+               <span class="sr-only">кнопка меню</span>
+               <span></span>
              </button>
              <div class="leftside-menu leftside-menu--close">
                <div class="leftside-menu__top">
                  <a class="logo" href="#">
                    <img src="images/icon/logo-green.svg" alt="логотип" width="200" height="60">
                  </a>
-                 <button class="leftside-menu__close">
-                   <img src="images/icon/close-btn.svg" alt="">
+                 <button class="leftside-menu__close" type="button">
+                  <svg class="leftside-menu__close-img">
+                    <use xlink:href="images/sprite.svg#close-btn"></use>
+                  </svg>
                  </button>
                </div>
 

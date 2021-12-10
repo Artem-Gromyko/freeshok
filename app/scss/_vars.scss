@@ -18,3 +18,18 @@ $black: #000000;
   background-size: cover;
   background-position: center center;
 }
+
+%checkbox-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0)
+}
+
+%form {
+  padding: 22px 18px 18px;
+  border: 1px solid $silver-600;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+}

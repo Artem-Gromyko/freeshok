@@ -20,20 +20,21 @@
     text-transform: uppercase;
     transition: color 0.3s, box-shadow 0.3s, border-bottom 0.3s;
 
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 9px;
-      width: 100%;
-      height: 3px;
-      background-color: $green-200;
-      opacity: 0;
-    }
-
     &.mixitup-control-active {
+      position: relative;
+
       &::after {
-        opacity: 1;
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 9px;
+        width: 100%;
+        height: 3px;
+        background-color: $green-200;
+
+        @include r(575) {
+          bottom: 4px;
+        }
       }
     }
 

@@ -3,7 +3,6 @@
   display: flex;
   max-width: 576px;
   width: 100%;
-  margin-right: 20px;
 
   &__input {
     width: 100%;
@@ -28,9 +27,12 @@
 
     &:focus {
       box-shadow: 0 0 0 4px rgba($white, 0.5);
-      border-radius: 6px 0 0 6px;
+      border-radius: 6px;
     }
 
+    @include r(1200) {
+      padding-right: 115px;
+    }
   }
 
   &__btn {
@@ -61,27 +63,5 @@
     @include r(1200) {
       padding: 15px 23px;
     }
-  }
-
-  &.active {
-    transform: translateX(0);
-
-    .form-search__input {
-      border-radius: 0;
-    }
-
-    .form-search__btn {
-      border-radius: 0;
-    }
-  }
-
-  @include r(768) {
-    position: absolute;
-    top: 110px;
-    left: 0;
-    z-index: 2;
-    max-width: 100%;
-    border: 1px solid #000;
-    transform: translateX(-200%);
   }
 }

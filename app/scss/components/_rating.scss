@@ -1,0 +1,23 @@
+  .rating {
+    position: relative;
+    padding-right: 18px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 16px;
+      height: 16px;
+      background-image: url('../images/icon/star.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    @include r(575) {
+      padding-right: 21px;
+    }
+  }

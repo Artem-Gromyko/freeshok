@@ -1,24 +1,60 @@
+const swiper = new Swiper('.related__slider', {
+  slidesPerView: 2,
+  spaceBetween: 5,
+  observer: true,
+  observeParents: true,
+  observeSlideChildren: true,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+  skideToClickedSlide: true,
+  loop: true,
+  slidesPerGroup: 2,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 15
+    },
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 30
+    },
+  }
+});
+
 $(function () {
 
-  $('.shop-content__filter-btn').on('click', function () {
-    $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
-    $(this).addClass('shop-content__filter-btn--active');
-  });
-
-  $('.button-list').on('click', function () {
-    $('.product-card').addClass('product-card--list');
-    $('.shop-content__inner').addClass('shop-content__nogrid');
-  });
-
-  $('.button-grid').on('click', function () {
-    $('.product-card').removeClass('product-card--list');
-    $('.shop-content__inner').removeClass('shop-content__nogrid');
+  // catalog-page
+  $('.fillter__item-top').on('click', function () {
+    $(this).next('.fillter__item-content').slideToggle();
+    $(this).toggleClass('fillter__item-top--rotate');
   });
 
 
-  $('.select-style').styler();
+  $('.product-tabs__top-item').on('click', function (e) {
+    e.preventDefault();
+    $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+    $(this).addClass('product-tabs__top-item--active');
 
-// filter-price
+    $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+    $($(this).attr('href')).addClass('product-tabs__content-item--active');
+  });
+
+  $(".star").rateYo({
+    starWidth: "16px",
+    normalFill: "rgba(193, 193, 193, 0.3)",
+    ratedFill: "#FFB800"
+  });
+
+  $('.select-style, .product-one__content-num').styler();
+
+  // filter-price
   var $range = $(".fillter-price__input"),
     $inputFrom = $(".fillter-price__from"),
     $inputTo = $(".fillter-price__to"),
@@ -130,20 +166,20 @@ $(function () {
     if (!$(event.target).closest(".leftside-menu, .menu__btn").length) {
       $("body").find(".leftside-menu").addClass("leftside-menu--close");
       $('body').removeClass('lock');
-      $(".blackout").css("display", "none");
+      $('.blackout').css('display', 'none');
     }
   });
 
   $('.menu__btn').on('click', function () {
     $('.leftside-menu').removeClass('leftside-menu--close');
     $('body').toggleClass('lock');
-    $(".blackout").css("display", "block");
+    $('.blackout').css('display', 'block');
   });
 
   $('.leftside-menu__close').on('click', function () {
     $('.leftside-menu').addClass('leftside-menu--close');
     $('body').toggleClass('lock');
-    $(".blackout").css("display", "none");
+    $('.blackout').css('display', 'none');
   });
 
   // header-form
@@ -157,60 +193,84 @@ $(function () {
   });
 
 
-  // catalog-page
-  $('.fillter__item-top--category').on('click', function () {
-    $('.fillter-category__list').toggleClass('fillter-category__list--active');
-  });
-
-  $('.fillter__item-top--suggestions').on('click', function () {
-    $('.fillter-suggestions__form').toggleClass('fillter-suggestions__form--active');
-  });
-
-  $('.fillter__item-top--brends').on('click', function () {
-    $('.fillter-brends__form').toggleClass('fillter-brends__form--active');
-  });
-
-  $('.fillter__item-top--price').on('click', function () {
-    $('.fillter-price__form').toggleClass('fillter-price__form--active');
-  });
-
-
   // shop-filters
   $(document).on('click', function (event) {
     if (!$(event.target).closest(".shop__filters, .shop-content__button").length) {
       $("body").find(".shop__filters").addClass("shop__filters--close");
-      $('body').removeClass('lock');
-      $(".blackout").css("display", "none");
+      $('.wrapper').removeClass('lock');
+      $('.blackout').css('display', 'none');
     }
   });
 
   $('.shop-content__button').on('click', function () {
     $('.shop__filters').toggleClass('shop__filters--close');
-    $('body').toggleClass('lock');
-    $(".blackout").css("display", "block");
+    $('.wrapper').toggleClass('lock');
+    $('.blackout').css('display', 'bloc');
   });
 
   $('.shop__filters-close').on('click', function () {
     $('.shop__filters').addClass('shop__filters--close');
-    $('body').toggleClass('lock');
-    $(".blackout").css("display", "none");
+    $('.wrapper').toggleClass('lock');
+    $('.blackout').css('display', 'none');
   });
 
 
+  $('.shop-content__filter-btn').on('click', function () {
+    $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
+    $(this).addClass('shop-content__filter-btn--active');
+  });
 
+  $('.button-list').on('click', function () {
+    $('.product-card').addClass('product-card--list');
+    $('.shop-content__inner').addClass('shop-content__nogrid');
+  });
 
-
-
-  var containerEl1 = document.querySelector('[data-ref="container-1"]');
-  var containerEl2 = document.querySelector('[data-ref="container-2"]');
-
-  var config = {
-    controls: {
-      scope: 'local'
-    }
-  };
-
-  var mixer1 = mixitup(containerEl1, config);
-  var mixer2 = mixitup(containerEl2, config);
-
+  $('.button-grid').on('click', function () {
+    $('.product-card').removeClass('product-card--list');
+    $('.shop-content__inner').removeClass('shop-content__nogrid');
+  });
 });
+
+const myCarousel = new Carousel(document.querySelector("#myCarousel"), {
+  preload: 1,
+  Arrows: true,
+  slidesPerPage: 1,
+  infinite: false,
+  responsive: [{
+    breakpoint: 767,
+    settings: {
+      Arrows: false,
+    }
+  }],
+});
+
+Fancybox.bind('[data-fancybox="gallery"]', {
+  Thumbs: false,
+  Toolbar: false,
+  slidesPerPage: 1,
+
+  closeButton: "top",
+
+  Carousel: {
+    Dots: true,
+    on: {
+      change: (that) => {
+        myCarousel.slideTo(myCarousel.findPageForSlide(that.page), {
+          friction: 0.9,
+        });
+      },
+    },
+  },
+});
+
+var containerEl1 = document.querySelector('[data-ref="container-1"]');
+var containerEl2 = document.querySelector('[data-ref="container-2"]');
+
+var config = {
+  controls: {
+    scope: 'local'
+  }
+};
+
+var mixer1 = mixitup(containerEl1, config);
+var mixer2 = mixitup(containerEl2, config);

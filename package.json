@@ -25,8 +25,11 @@
     "jquery": "^3.6.0",
     "jquery-form-styler": "^2.0.2",
     "mixitup": "^3.3.1",
+    "rateyo": "^2.3.2",
     "sass": "^1.43.4",
-    "slick-carousel": "^1.8.1"
+    "simplebar": "^5.3.6",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^7.3.3"
   },
   "dependencies": {}
 }

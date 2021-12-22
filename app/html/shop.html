@@ -36,14 +36,14 @@
             </button>
 
             <div class="fillter-category fillter__item">
-              <div class="fillter__item-top fillter__item-top--category">
+              <div class="fillter__item-top">
                 <h3 class="fillter__title">Категории</h3>
-                <svg class="arrowtop-icon">
+                <svg class="arrowtop-icon fillter__arrowtop-icon">
                   <use xlink:href="images/sprite.svg#arrow-top"></use>
                 </svg>
               </div>
 
-              <ul class="fillter-category__list">
+              <ul class="fillter-category__list fillter__item-content" data-simplebar>
                 <li class="fillter-category__item">
                   <a class="fillter-category__link" href="#">
                     Овощи и фрукты
@@ -118,14 +118,14 @@
             </div>
 
             <div class="fillter__item fillter-suggestions">
-              <div class="fillter__item-top fillter__item-top--suggestions">
+              <div class="fillter__item-top">
                 <h3 class="fillter__title">Предложения</h3>
-                <svg class="arrowtop-icon">
+                <svg class="arrowtop-icon fillter__arrowtop-icon">
                   <use xlink:href="images/sprite.svg#arrow-top"></use>
                 </svg>
               </div>
 
-              <form class="fillter-suggestions__form" action="#">
+              <form class="fillter-suggestions__form fillter__item-content" action="#">
                 <label class="fillter-suggestions__label">
                   <input class="fillter-suggestions__input" type="checkbox">
                   <span class="fillter-suggestions__checkbox"></span>
@@ -147,14 +147,14 @@
             </div>
 
             <div class="fillter__item fillter-brends">
-              <div class="fillter__item-top fillter__item-top--brends">
+              <div class="fillter__item-top">
                 <h3 class="fillter__title">Бренд</h3>
-                <svg class="arrowtop-icon">
+                <svg class="arrowtop-icon fillter__arrowtop-icon">
                   <use xlink:href="images/sprite.svg#arrow-top"></use>
                 </svg>
               </div>
 
-              <form class="fillter-brends__form" action="#">
+              <form class="fillter-brends__form fillter__item-content" action="#">
                 <label class="fillter-suggestions__label">
                   <input class="fillter-suggestions__input" type="checkbox">
                   <span class="fillter-suggestions__checkbox"></span>
@@ -194,26 +194,26 @@
             </div>
 
             <div class="fillter__item fillter-price">
-              <div class="fillter__item-top fillter__item-top--price">
+              <div class="fillter__item-top">
                 <h3 class="fillter__title">Цена</h3>
-                <svg class="arrowtop-icon">
+                <svg class="arrowtop-icon fillter__arrowtop-icon">
                   <use xlink:href="images/sprite.svg#arrow-top"></use>
                 </svg>
               </div>
-              <form class="fillter-price__form" action="#">
-                <ul class="fillter-price__list">
-                  <li class="fillter-price__item">
+              <form class="fillter-price__form fillter__item-content" action="#">
+                <div class="fillter-price__list">
+                  <lavel class="fillter-price__item">
                     <span class="fillter-price__text">от</span>
                     <input class="fillter-price__from fillter-price__num" type="text" type="text" value="0" />
                     <span class="fillter-price__currency">₽</span>
-                  </li>
+                  </lavel>
 
-                  <li class="fillter-price__item">
+                  <label class="fillter-price__item">
                     <span class="fillter-price__text">до</span>
                     <input class="fillter-price__to fillter-price__num" type="text" type="text" value="0" />
                     <span class="fillter-price__currency">₽</span>
-                  </li>
-                </ul>
+                  </label>
+                </div>
                 <div>
                   <input class="fillter-price__input" type="text" data-min="0" data-max="1200" data-from="100"
                     data-to="1000">
@@ -279,7 +279,7 @@
                   </button>
 
                   <a class="product-card__link" href="#">
-                    <img class="product-card__img" src="images/content/products/drink-lifeline1.jpg"
+                    <img class="product-card__img" src="images/content/products/drink-lifeline.jpg"
                       alt="напиток Lifeline" width="300" height="215">
                   </a>
 
@@ -879,4 +879,8 @@
   </main>
 
   @include('./page-home/footer.html')
-  @include('./page-home/script.html')
+  </div>
+  <script src="js/main.min.js"></script>
+  </body>
+
+  </html>
